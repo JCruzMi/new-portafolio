@@ -407,7 +407,6 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 import gsap from "gsap";
-import VueNumberAnimation from "vue-number-animation";
 
 const month_names_short = [
   "Jan",
