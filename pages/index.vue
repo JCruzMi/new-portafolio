@@ -7,85 +7,83 @@
         class="max-w-[1366px] w-full flex md:flex-row flex-col gap-0 mx-auto h-full p-4"
       >
         <div
-          class="max-w-[1006] w-full bg-white h-full relative rounded-tl-[56px] rounded-bl-[56px]"
+          class="max-w-[1006] w-full bg-white overflow-hidden h-full relative rounded-tl-[56px] rounded-bl-[56px]"
         >
-          <transition appear @before-enter="beforeEnterMask" @enter="enterMask">
+          <div
+            class="mask-index w-auto max-w-full h-full overflow-hidden relative inset-0 bg-no-repeat"
+            ref="container"
+          >
             <div
-              class="mask-index w-auto max-w-full h-full overflow-hidden relative inset-0 bg-no-repeat"
+              class="flex h-full justify-center items-center w-full absolute left-0 top-0 right-0 bottom-0 z-[0]"
+              ref="bg1"
+            >
+              <svg
+                width="899"
+                height="100%"
+                viewBox="0 0 899 732"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 207.595C0 194.34 10.7452 183.595 24 183.595H220.709C227.319 183.595 233.637 186.322 238.172 191.132L347.442 307.039C356.794 316.959 372.519 317.107 382.056 307.365L675.878 7.21128C680.393 2.59932 686.575 0 693.029 0H874.6C887.855 0 898.6 10.7452 898.6 24V101.757C898.6 108.128 896.067 114.237 891.559 118.739L592.404 417.478C587.904 421.972 581.804 424.496 575.445 424.496H505.595C484.451 424.496 473.639 449.858 488.279 465.114L758.411 746.602C762.7 751.071 765.095 757.026 765.095 763.22V825C765.095 838.255 754.35 849 741.095 849H580.013C573.589 849 567.433 846.424 562.922 841.85L6.90949 277.895C2.48203 273.404 0 267.352 0 261.045V207.595Z"
+                  fill="#FFC01D"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex justify-center items-center h-full w-full absolute left-0 top-0 right-0 bottom-0 z-[0]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="982"
+                height="785"
+                viewBox="0 0 982 785"
+                fill="none"
+              >
+                <path
+                  d="M982 643.7V140.8C982 91.5154 982 66.8731 972.408 48.0488C963.971 31.4906 950.509 18.0283 933.951 9.59143C915.126 7.62933e-06 890.484 7.62933e-06 841.2 7.62933e-06H787.619H706.659H627.212H548.522H466.805L102.837 0C66.9941 0 49.0725 0 35.3821 6.97558C23.3397 13.1115 13.549 22.9022 7.41308 34.9446C0.4375 48.635 0.4375 66.5566 0.437502 102.4L0.437506 275.629C0.437507 302.185 0.437507 315.463 3.99607 327.594C7.14726 338.335 12.319 348.377 19.2338 357.18C27.0427 367.122 37.8525 374.833 59.4721 390.254L84.8061 408.326L84.8069 408.326C98.4315 418.045 105.244 422.905 112.687 426.352C119.292 429.411 126.252 431.639 133.406 432.984C141.467 434.5 149.835 434.5 166.572 434.5H362.324C411.608 434.5 436.251 434.5 455.075 444.091C471.633 452.528 485.095 465.991 493.532 482.549C503.124 501.373 503.124 526.015 503.124 575.3V643.7C503.124 692.985 503.124 717.627 512.715 736.451C521.152 753.009 534.614 766.472 551.172 774.909C569.997 784.5 594.639 784.5 643.924 784.5H841.2C890.484 784.5 915.126 784.5 933.951 774.909C950.509 766.472 963.971 753.009 972.408 736.451C982 717.627 982 692.985 982 643.7Z"
+                  fill="url(#pattern0)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_104_153"
+                      transform="matrix(0.00040006 0 0 0.000500553 0.076397 0.149393)"
+                    />
+                  </pattern>
+                  <image
+                    ref="bg2"
+                    id="image0_104_153"
+                    width="605"
+                    height="572"
+                    href="/images/logo.png"
+                  />
+                </defs>
+              </svg>
+            </div>
+            <div
+              class="flex h-full w-full absolute left-0 top-0 right-0 bottom-0 z-[1]"
             >
               <div
-                class="flex h-full justify-center items-center w-full absolute left-0 top-0 right-0 bottom-0 z-[0]"
-              >
-                <svg
-                  width="899"
-                  height="100%"
-                  viewBox="0 0 899 732"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 207.595C0 194.34 10.7452 183.595 24 183.595H220.709C227.319 183.595 233.637 186.322 238.172 191.132L347.442 307.039C356.794 316.959 372.519 317.107 382.056 307.365L675.878 7.21128C680.393 2.59932 686.575 0 693.029 0H874.6C887.855 0 898.6 10.7452 898.6 24V101.757C898.6 108.128 896.067 114.237 891.559 118.739L592.404 417.478C587.904 421.972 581.804 424.496 575.445 424.496H505.595C484.451 424.496 473.639 449.858 488.279 465.114L758.411 746.602C762.7 751.071 765.095 757.026 765.095 763.22V825C765.095 838.255 754.35 849 741.095 849H580.013C573.589 849 567.433 846.424 562.922 841.85L6.90949 277.895C2.48203 273.404 0 267.352 0 261.045V207.595Z"
-                    fill="#FFC01D"
-                  />
-                </svg>
-              </div>
-              <div
-                class="flex justify-center items-center h-full w-full absolute left-0 top-0 right-0 bottom-0 z-[0]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="982"
-                  height="785"
-                  viewBox="0 0 982 785"
-                  fill="none"
-                >
-                  <path
-                    d="M982 643.7V140.8C982 91.5154 982 66.8731 972.408 48.0488C963.971 31.4906 950.509 18.0283 933.951 9.59143C915.126 7.62933e-06 890.484 7.62933e-06 841.2 7.62933e-06H787.619H706.659H627.212H548.522H466.805L102.837 0C66.9941 0 49.0725 0 35.3821 6.97558C23.3397 13.1115 13.549 22.9022 7.41308 34.9446C0.4375 48.635 0.4375 66.5566 0.437502 102.4L0.437506 275.629C0.437507 302.185 0.437507 315.463 3.99607 327.594C7.14726 338.335 12.319 348.377 19.2338 357.18C27.0427 367.122 37.8525 374.833 59.4721 390.254L84.8061 408.326L84.8069 408.326C98.4315 418.045 105.244 422.905 112.687 426.352C119.292 429.411 126.252 431.639 133.406 432.984C141.467 434.5 149.835 434.5 166.572 434.5H362.324C411.608 434.5 436.251 434.5 455.075 444.091C471.633 452.528 485.095 465.991 493.532 482.549C503.124 501.373 503.124 526.015 503.124 575.3V643.7C503.124 692.985 503.124 717.627 512.715 736.451C521.152 753.009 534.614 766.472 551.172 774.909C569.997 784.5 594.639 784.5 643.924 784.5H841.2C890.484 784.5 915.126 784.5 933.951 774.909C950.509 766.472 963.971 753.009 972.408 736.451C982 717.627 982 692.985 982 643.7Z"
-                    fill="url(#pattern0)"
-                  />
-                  <defs>
-                    <pattern
-                      id="pattern0"
-                      patternContentUnits="objectBoundingBox"
-                      width="1"
-                      height="1"
-                    >
-                      <use
-                        xlink:href="#image0_104_153"
-                        transform="matrix(0.00040006 0 0 0.000500553 0.076397 0.149393)"
-                      />
-                    </pattern>
-                    <image
-                      id="image0_104_153"
-                      width="605"
-                      height="572"
-                      href="/images/logo.png"
-                    />
-                  </defs>
-                </svg>
-              </div>
-              <div
-                class="flex h-full w-full absolute left-0 top-0 right-0 bottom-0 z-[1]"
-              >
-                <div
-                  class="bg-[url('/images/girl.png')] -scale-x-100 bg-no-repeat w-full h-full absolute -right-16 -top-0 z-10 bg-[left_bottom_-8rem]"
-                ></div>
-              </div>
-              <transition
-                appear
-                @before-enter="beforeEnterMask"
-                @enter="enterMask"
-              >
-                <div
-                  class="flex h-full w-full absolute left-0 top-0 right-0 bottom-0 z-[1]"
-                >
-                  <div
-                    class="bg-[url('/images/girl.png')] bg-no-repeat w-[981px] h-[784px] absolute top-0 right-0"
-                  ></div></div
-              ></transition>
+                ref="image1"
+                class="bg-[url('/images/girl.png')] -scale-x-100 bg-no-repeat w-full h-full absolute -right-16 -top-0 z-10 bg-[left_bottom_-9rem]"
+              ></div>
             </div>
-          </transition>
+            <div
+              class="flex h-full w-full absolute -left-5 top-0 right-0 bottom-0 z-[1]"
+              ref="image2"
+            >
+              <div
+                class="bg-[url('/images/girl.png')] bg-no-repeat w-[981px] h-[784px] absolute top-0 right-0"
+              ></div>
+            </div>
+          </div>
           <div
             class="absolute bottom-0 content-center h-1/2 left-0 w-full flex flex-col md:flex-row"
           >
@@ -95,6 +93,7 @@
                   src="/images/black.png"
                   alt="black"
                   class="max-w-[288px] h-auto"
+                  ref="black"
                 />
               </div>
               <div class="w-full justify-end flex">
@@ -102,9 +101,13 @@
                   src="/images/friday.png"
                   alt="black"
                   class="max-w-[259px] h-auto"
+                  ref="friday"
                 />
               </div>
-              <div class="flex flex-row gap-8 items-center justify-center">
+              <div
+                class="flex flex-row gap-8 items-center justify-center"
+                ref="container"
+              >
                 <div
                   class="h-[131px] bg-[#ededf2] rounded-full flex flex-col items-center justify-center"
                 >
@@ -137,6 +140,7 @@
             </div>
             <div
               class="flex w-full justify-center items-end md:pb-16 md:pl-4 h-full"
+              ref="button"
             >
               <button
                 class="max-w-[424px] bg-[#9123ff] text-white rounded-[48px] shadow-sm text-[32px] font-semibold text-center px-[74px] md:px-[140px] py-[23px] md:py-[42px]"
@@ -168,23 +172,24 @@
                 fill="#9122FF"
               />
             </svg>
-            <p class="cursor-pointer hover:shadow-sm transition-all">
-              Side-Event
-            </p>
-            <p class="cursor-pointer hover:shadow-sm transition-all">
-              Sponsors
-            </p>
+            <div class="flex gap-6" ref="nav">
+              <p class="cursor-pointer hover:shadow-sm transition-all">Home</p>
+              <p class="cursor-pointer hover:shadow-sm transition-all">
+                Sponsors
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="max-w-[360px] w-full relative bg-white rounded-tr-[56px] rounded-br-[56px] pr-2"
+          class="max-w-[360px] w-full relative bg-white rounded-tr-[56px] rounded-br-[56px] pr-2 overflow-hidden"
         >
           <div
             class="w-full bg-[#F5F5FC] relative rounded-b-[40px] rounded-t-[60px] mt-1"
           >
             <div
               class="w-auto h-[311px] shrink-0 text-[#8FFF5B] relative left-0 top-0 right-1"
+              ref="start"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -275,12 +280,14 @@
             </div>
             <div class="flex flex-col w-full gap-2 p-2">
               <div
+                ref="stats"
                 class="rounded-[32px] text-black bg-white inline-flex flex-col items-start gap-2 px-12 py-8"
               >
                 <p class="font-medium">Total Event Discount Pool</p>
-                <p class="text-6xl font-bold">$10.000+</p>
+                <p class="text-6xl font-bold">{{ formatedNum }}+</p>
               </div>
               <div
+                ref="rules"
                 class="rounded-[32px] text-black bg-white inline-flex flex-col items-start gap-2 px-12 py-8 relative"
               >
                 <div
@@ -325,6 +332,7 @@
                 </div>
               </div>
               <div
+                ref="faq"
                 class="rounded-[32px] text-black bg-white inline-flex flex-col items-start gap-2 px-12 py-8 relative"
               >
                 <div
@@ -367,8 +375,10 @@
               </div>
             </div>
           </div>
+
           <div
             class="flex gap-4 text-black justify-between items-end text-xl font-bold pt-8 px-4"
+            ref="today"
           >
             <p>Today</p>
             <div class="flex flex-col justify-end w-auto text-2xl font-bold">
@@ -407,6 +417,32 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 import gsap from "gsap";
+import { ref, onMounted } from "vue";
+
+const container = ref(null);
+const image1 = ref(null);
+const image2 = ref(null);
+const bg1 = ref(null);
+const bg2 = ref(null);
+const friday = ref(null);
+const black = ref(null);
+const button = ref(null);
+const nav = ref(null);
+
+// Sección 2
+
+const start = ref(null);
+const stats = ref(null);
+const rules = ref(null);
+const faq = ref(null);
+const today = ref(null);
+const day = ref(null);
+const icon = ref(null);
+
+const data = reactive({
+  num: 0,
+  maxNum: 0,
+});
 
 const month_names_short = [
   "Jan",
@@ -425,20 +461,169 @@ const month_names_short = [
 
 const mounth = ref(month_names_short[new Date().getMonth()]);
 
-const beforeEnterMask = (el) => {
-  el.style.opacity = 1;
-  el.style.transform = "scale(0.1)";
-};
+function increaseCount() {
+  data.num = 10000;
+}
 
-const enterMask = (el, done) => {
-  gsap.to(el, {
+watch(data, (newValue, oldValue) => {
+  gsap.to(data, {
+    duration: 0.5,
+    maxNum: newValue.num,
+    ease: "none",
+  });
+});
+
+const formatedNum = computed(() => {
+  let pesos = new Intl.NumberFormat("es-CO", {
+    style: "currency",
+    currency: "COP",
+    minimumFractionDigits: 0,
+  });
+  return pesos.format(Math.round(data.maxNum));
+});
+
+increaseCount();
+
+onMounted(() => {
+  gsap.from(container.value, {
+    scale: 0,
+    opacity: 1,
+    ease: "power2.out",
+    duration: 1.4,
+  });
+
+  gsap.from(image1.value, {
+    opacity: 1,
+    x: 1000,
+    duration: 1.4,
+    y: 0,
+    ease: "power2.out",
+    delay: 0,
+  });
+
+  gsap.from(image2.value, {
+    opacity: 1,
+    x: -600,
+    y: -400,
+    duration: 1.4,
+    ease: "power2.out",
+    delay: 0,
+  });
+
+  gsap.from(bg1.value, {
     opacity: 1,
     scale: 1,
-    duration: 1,
-    ease: "sine.out",
-    onComplete: done,
+    x: 300,
+    y: 300,
+    duration: 1.4,
+    transform: "rotate(90deg)",
+    ease: "power2.out",
+    delay: 0,
   });
-};
+
+  gsap.from(bg2.value, {
+    opacity: 1,
+    x: 300,
+    y: 1000,
+    duration: 1.4,
+    transform: "rotate(-90deg)",
+    ease: "power2.out",
+    delay: 0,
+  });
+
+  gsap.from(black.value, {
+    opacity: 1,
+    scale: 1,
+    x: 300,
+    y: "-50vh",
+    duration: 1.4,
+    transform: "rotate(-25deg)",
+    ease: "power2.out",
+  });
+
+  gsap.from(friday.value, {
+    opacity: 1,
+    x: -300,
+    y: 10,
+    duration: 1.4,
+    transform: "rotate(45deg)",
+    ease: "power2.out",
+    delay: 0,
+  });
+
+  gsap.from(button.value, {
+    opacity: 1,
+    x: 0,
+    y: 300,
+    duration: 1.4,
+    ease: "expo.inOut",
+    delay: 0,
+  });
+
+  gsap.from(nav.value, {
+    opacity: 0,
+    width: 0,
+    x: -100,
+    duration: 1.4,
+    ease: "expo.inOut",
+    delay: 0,
+  });
+});
+
+onMounted(() => {
+  const tl = gsap.timeline({ delayed: 0, paused: true });
+  tl.from(start.value, {
+    opacity: 1,
+    x: 600,
+    duration: 0.2,
+    y: 0,
+    ease: "power2.out",
+  });
+  tl.from(stats.value, {
+    opacity: 1,
+    x: 600,
+    duration: 0.4,
+    y: 0,
+    ease: "power2.out",
+  });
+  tl.from(rules.value, {
+    opacity: 1,
+    x: 600,
+    duration: 0.4,
+    y: 0,
+    ease: "power2.out",
+  });
+  tl.from(faq.value, {
+    opacity: 1,
+    x: 600,
+    duration: 0.4,
+    y: 0,
+    ease: "power2.out",
+  });
+  tl.from(today.value, {
+    opacity: 1,
+    x: 0,
+    duration: 0.4,
+    y: 300,
+    ease: "power2.out",
+  });
+  tl.from(day.value, {
+    opacity: 1,
+    x: 0,
+    duration: 0.4,
+    y: 300,
+    ease: "power2.out",
+  });
+  tl.from(icon.value, {
+    opacity: 1,
+    x: 0,
+    duration: 0.4,
+    y: 300,
+    ease: "power2.out",
+  });
+
+  tl.play();
+});
 </script>
 
 <style>
