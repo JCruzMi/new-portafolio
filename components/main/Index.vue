@@ -8,7 +8,7 @@
       <div
         class="box bg-surface min-h-[208px] items-start order-3 self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
-        Tecnologias - Vue/React
+        <p class="">Tecnologias - Vue/React</p>
       </div>
       <div
         class="box mail min-h-[208px] order-4 lg:col-auto items-start self-start hover:mail transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
@@ -20,12 +20,12 @@
       <div
         class="box bg-surface min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
-        Proyectos
+        <p class="">Proyectos</p>
       </div>
       <div
         class="box bg-surface min-h-[208px] col-[auto_/_span_2] order-0 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
-        <h1 class="text-3xl md:text-6xl font-bold text-text uppercase">
+        <h1 class="inside text-3xl md:text-6xl font-bold text-text uppercase">
           Juan David Cruz
         </h1>
         <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
@@ -54,7 +54,8 @@
       <div
         class="box bg-surface min-h-[208px] w-full hover:bg-surface/5 transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
       >
-        <div class="flex gap-2 text-white cursor-default">
+        <div class="flex gap-2 text-white flex-col cursor-default">
+          <p>{{ currentTime.toLocaleDateString() }}</p>
           <p class="text-3xl md:text-6xl font-bold">
             {{ currentTime.toLocaleTimeString().slice(0, -5) }}
           </p>
@@ -80,8 +81,23 @@ onMounted(() => {
     duration: 1,
     scaleY: 1,
     opacity: 1,
-    delay: 1,
+    delay: 0,
     stagger: 0.2,
+    ease: "power2.inOut",
+  });
+
+  gsap.set(".inside", {
+    transformOrigin: "left",
+    scaleX: 0,
+    opacity: 0,
+    x: "-100%",
+  });
+  gsap.to(".inside", {
+    duration: 1,
+    scaleX: 1,
+    x: 0,
+    opacity: 1,
+    delay: 2,
     ease: "power2.inOut",
   });
 });
