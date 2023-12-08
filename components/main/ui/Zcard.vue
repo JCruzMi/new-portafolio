@@ -5,6 +5,7 @@ const target = ref(null);
 
 const props = defineProps({
   light: Boolean,
+  class: String,
 });
 
 const { elementX, elementY, isOutside, elementHeight, elementWidth } =
@@ -44,8 +45,8 @@ const rotationLight = computed(() =>
 );
 </script>
 <template>
-  <div class="w-full lg:p-4 relative group" ref="target">
-    <div class="w-full h-full card overflow-hidden">
+  <div class="w-full lg:p-4 relative group" :class="class" ref="target">
+    <div class="w-full h-full p-1 card overflow-hidden">
       <span
         v-if="light"
         class="atropos-highlight transition-all ease-in-out group-hover:opacity-100"

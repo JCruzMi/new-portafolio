@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #0c1016;
+}
+
 @font-face {
   font-family: Geist;
   src: url("/fonts/Geist/Geist-Regular.otf");

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-icon",
     "@nuxtjs/google-fonts",
+    "@vueuse/nuxt",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
