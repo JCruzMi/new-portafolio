@@ -55,7 +55,16 @@
         class="box bg-surface min-h-[208px] w-full hover:bg-surface/5 transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
-          <p>{{ currentTime.toLocaleDateString() }}</p>
+          <div
+            class="flex flex-row justify-start gap-1 w-auto text-2xl font-bold"
+          >
+            <span class="w-auto text-6xl flex justify-end items-end">{{
+              formatedNum
+            }}</span>
+            <span class="flex w-full justify-start items-end text-2xl">{{
+              mounth
+            }}</span>
+          </div>
           <p class="text-3xl md:text-6xl font-bold">
             {{ currentTime.toLocaleTimeString().slice(0, -5) }}
           </p>
@@ -71,6 +80,47 @@ import { useCurrentTime } from "@/composables/useCurrentTime";
 import { Icon } from "@iconify/vue";
 
 const { currentTime } = useCurrentTime();
+
+const month_names_short = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const mounth = ref(month_names_short[new Date().getMonth()]);
+
+const data = reactive({
+  num: 0,
+  maxNum: 0,
+});
+
+function increaseCount() {
+  data.num = new Date().getDate();
+}
+
+watch(data, (newValue, oldValue) => {
+  gsap.to(data, {
+    duration: 0.5,
+    delay: 2,
+    maxNum: newValue.num,
+    ease: "none",
+  });
+});
+
+const formatedNum = computed(() => {
+  return Math.round(data.maxNum);
+});
+
+increaseCount();
 
 onMounted(() => {
   gsap.set(".box", {
