@@ -10,54 +10,52 @@
       >
         <div
           class="gradient-border min-h-[208px] items-start order-0 self-start bg-gay-900 rounded-3xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
-        >
-          1
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] order-1 lg:col-auto items-start self-start bg-gay-900 rounded-3xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
-        >
-          2
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-3 h-full items-start self-start bg-gay-900 rounded-3xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
-        >
-          3
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] col-[auto_/_span_2] order-4 h-full items-start self-start bg-gay-900 rounded-3xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
-        >
-          4
-        </div>
+        ></div>
       </div>
       <div
         class="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
       >
         <div
           class="gradient-border min-h-[208px] w-full bg-gay-[#000] rounded-3xl flex p-10"
-        >
-          5
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] w-full bg-gay-900 rounded-3xl flex p-10"
-        >
-          6
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] w-full bg-gay-900 rounded-3xl flex p-10"
-        >
-          7
-        </div>
+        ></div>
         <div
           class="gradient-border min-h-[208px] w-full bg-gay-900 rounded-3xl flex p-10"
-        >
-          8
-        </div>
+        ></div>
       </div>
     </section>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import gsap from "gsap";
+
+onMounted(() => {
+  gsap.from(".gradient-border", {
+    duration: 1,
+    scale: 0.5,
+    opacity: 0,
+    delay: 0,
+    stagger: 0.2,
+    ease: "back.inOut",
+    force3D: true,
+  });
+});
+</script>
 
 <style>
 body {
