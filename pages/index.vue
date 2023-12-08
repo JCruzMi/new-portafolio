@@ -1,6 +1,6 @@
 <template>
   <main
-    class="mx-auto max-w-7xl w-full flex justify-center items-center min-h-screen lg:p-12 md:p-8 p-4"
+    class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4"
   >
     <Index />
   </main>
@@ -66,5 +66,4 @@ import Index from "~/components/main/Index.vue";
   background-position: -50% 0;
   opacity: 1;
 }
-
 </style>
