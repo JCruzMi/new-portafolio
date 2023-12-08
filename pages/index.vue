@@ -59,7 +59,7 @@ onMounted(() => {
 
 <style>
 body {
-  background-color: #010101;
+  background-color: #090909;
 }
 
 .gradient-border {
