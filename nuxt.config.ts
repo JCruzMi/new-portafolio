@@ -5,6 +5,9 @@ export default defineNuxtConfig({
       Outfit: true,
     },
   },
+  imports: {
+    autoImport: true,
+  },
   devtools: { enabled: true },
   modules: [
     "@nuxtjs/tailwindcss",
@@ -14,11 +17,11 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
-    configPath: "tailwind.config",
+    configPath: "tailwind.config.js",
     exposeConfig: false,
     exposeLevel: 2,
     config: {},
     injectPosition: "first",
-    viewer: true,
+    viewer: false,
   },
 });
