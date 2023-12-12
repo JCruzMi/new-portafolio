@@ -82,6 +82,8 @@
   </swiper>
 </template>
 <script setup>
+import gsap from "gsap";
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Keyboard, EffectCreative } from "swiper/modules";
 import "swiper/css";
@@ -159,4 +161,21 @@ const effects = [
     },
   },
 ];
+
+onMounted(() => {
+  gsap.set(".swiper", {
+    transformOrigin: "left",
+    scaleX: 0,
+    opacity: 1,
+    x: "-100%",
+  });
+  gsap.to(".swiper", {
+    duration: 1,
+    scaleX: 1,
+    x: 0,
+    opacity: 1,
+    delay: 2,
+    ease: "power2.inOut",
+  });
+});
 </script>
