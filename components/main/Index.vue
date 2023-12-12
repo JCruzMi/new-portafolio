@@ -6,30 +6,66 @@
       class="flex flex-col md:grid flex-none gap-3 grid-rows-[repeat(2,260px)] auto-rows-[260px] md:grid-cols-[repeat(2,minmax(200px,1fr))] lg:grid-cols-[repeat(3,minmax(200px,1fr))] overflow-hidden relative w-full h-min justify-center"
     >
       <div
-        class="box bg-surface min-h-[208px] items-start order-3 self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
+        class="box min-h-[208px] col-[auto_/_span_2] order-0 h-full items-start self-start rounded-xl flex gap-3 flex-nowrap flex-row justify-center justify-self-start relative w-full overflow-hidden"
       >
-        <p class="">Tecnologias - Vue/React</p>
+        <div
+          class="bg-black w-full h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300 p-10"
+        >
+          <h1 class="inside text-3xl md:text-6xl font-bold text-text uppercase">
+            Juan David Cruz
+          </h1>
+          <div
+            class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center"
+          >
+            <p>SOBRE MI</p>
+          </div>
+        </div>
+        <div
+          class="test justify-center items-center hidden min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
+        >
+          <Icon
+            icon="material-symbols:arrow-forward-ios"
+            class="w-10 h-10 text-white"
+          />
+        </div>
+      </div>
+      <div
+        class="box bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
+      >
+        <div class="flex flex-row flex-wrap gap-4 items-center justify-center">
+          <Icon icon="devicon:vuejs" class="w-10 h-10" />
+          <Icon icon="devicon:nuxtjs" class="w-10 h-10" />
+          <Icon icon="devicon:react" class="w-10 h-10" />
+          <Icon icon="devicon:nextjs" class="w-10 h-10" />
+          <Icon icon="devicon:astro" class="w-10 h-10" />
+          <Icon icon="devicon:html5" class="w-10 h-10" />
+          <Icon icon="devicon:css3" class="w-10 h-10" />
+          <Icon icon="devicon:javascript" class="w-10 h-10" />
+          <Icon icon="devicon:typescript" class="w-10 h-10" />
+          <Icon icon="vscode-icons:file-type-firebase" class="w-10 h-10" />
+          <Icon icon="devicon:github" class="w-10 h-10" />
+          <Icon icon="devicon:tailwindcss" class="w-10 h-10" />
+          <Icon icon="devicon:figma" class="w-10 h-10" />
+        </div>
+        <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
+          <p class="uppercase">Tecnologías</p>
+        </div>
       </div>
       <div
         class="box mail min-h-[208px] order-4 lg:col-auto items-start self-start hover:mail transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
         <div class="w-full p-8 md:p-16">
-          <Icon icon="bx:bxl-gmail" class="w-full h-full text-white" />
+          <Icon icon="ic:round-email" class="w-full h-full text-white" />
         </div>
       </div>
       <div
-        class="box bg-surface min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
+        class="box bg-surface min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-start justify-self-start p-10 relative w-full overflow-hidden"
       >
-        <p class="">Proyectos</p>
-      </div>
-      <div
-        class="box bg-surface min-h-[208px] col-[auto_/_span_2] order-0 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-center justify-self-start p-10 relative w-full overflow-hidden"
-      >
-        <h1 class="inside text-3xl md:text-6xl font-bold text-text uppercase">
-          Juan David Cruz
-        </h1>
+        <div class="flex w-full h-full">
+          <Swiper />
+        </div>
         <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
-          <p>SOBRE MI</p>
+          <p class="uppercase">Proyectos</p>
         </div>
       </div>
     </div>
@@ -78,6 +114,7 @@
 import gsap from "gsap";
 import { useCurrentTime } from "@/composables/useCurrentTime";
 import { Icon } from "@iconify/vue";
+import Swiper from "@/components/main/Swiper.vue";
 
 const { currentTime } = useCurrentTime();
 
@@ -148,6 +185,15 @@ onMounted(() => {
     x: 0,
     opacity: 1,
     delay: 2,
+    ease: "power2.inOut",
+  });
+
+  gsap.to(".test", {
+    duration: 1,
+    delay: 2,
+    display: "flex",
+    opacity: 1,
+    width: "80px",
     ease: "power2.inOut",
   });
 });
