@@ -85,8 +85,7 @@
         <Icon icon="mdi:github" class="w-full h-full" />
       </div>
       <div
-        class="boxButton tooltip insta text-white min-h-[208px] w-full hover:insta transition-colors duration-300 rounded-xl flex p-10"
-        data-tip="Instagram"
+        class="boxButton insta text-white min-h-[208px] w-full hover:insta transition-colors duration-300 rounded-xl flex p-10"
       >
         <Icon icon="fe:instagram" class="w-full h-full" />
       </div>
