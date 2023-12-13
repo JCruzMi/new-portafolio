@@ -21,7 +21,7 @@
           </div>
         </div>
         <div
-          class="test justify-center items-center hidden min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
+          class="arrow justify-center items-center hidden min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
         >
           <Icon
             icon="material-symbols:arrow-forward-ios"
@@ -32,40 +32,47 @@
       <div
         class="box bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
-        <div class="flex flex-row flex-wrap gap-4 items-center justify-center">
-          <Icon icon="devicon:vuejs" class="w-10 h-10" />
-          <Icon icon="devicon:nuxtjs" class="w-10 h-10" />
-          <Icon icon="devicon:react" class="w-10 h-10" />
-          <Icon icon="devicon:nextjs" class="w-10 h-10" />
-          <Icon icon="devicon:astro" class="w-10 h-10" />
-          <Icon icon="devicon:html5" class="w-10 h-10" />
-          <Icon icon="devicon:css3" class="w-10 h-10" />
-          <Icon icon="devicon:javascript" class="w-10 h-10" />
-          <Icon icon="devicon:typescript" class="w-10 h-10" />
-          <Icon icon="vscode-icons:file-type-firebase" class="w-10 h-10" />
-          <Icon icon="devicon:github" class="w-10 h-10" />
-          <Icon icon="devicon:tailwindcss" class="w-10 h-10" />
-          <Icon icon="devicon:figma" class="w-10 h-10" />
-        </div>
+        <Tecs />
         <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
           <p class="uppercase">Tecnologías</p>
         </div>
       </div>
       <div
-        class="box mail min-h-[208px] order-4 lg:col-auto items-start self-start hover:mail transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
+        class="box mail min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start hover:mail transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
       >
-        <div class="w-full p-8 md:p-16">
+        <div class="w-full p-14">
           <Icon icon="ic:round-email" class="w-full h-full text-white" />
         </div>
       </div>
       <div
-        class="box bg-surface min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 justify-start justify-self-start p-10 relative w-full overflow-hidden"
+        class="box min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start flex flex-col gap-3 justify-start justify-self-start relative w-full overflow-hidden"
       >
-        <div class="flex w-full h-full">
-          <Swiper />
-        </div>
-        <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
-          <p class="uppercase">Proyectos</p>
+        <div class="flex flex-col gap-3 relative w-full h-full">
+          <div
+            class="download flex w-full font-semibold text-white h-0 flex-row gap-3"
+          >
+            <div
+              class="flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+            >
+              <p class="w-full">Descargar CV</p>
+            </div>
+            <div
+              @click="toggle"
+              class="hidden sm:flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+            >
+              <Icon icon="ph:list-bold" class="w-10 h-10" />
+            </div>
+          </div>
+          <div
+            class="flex w-full h-full hover:bg-surface/5 transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
+          >
+            <Swiper />
+          </div>
+          <div
+            class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center"
+          >
+            <p class="uppercase">Proyectos</p>
+          </div>
         </div>
       </div>
     </div>
@@ -73,22 +80,23 @@
       class="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
     >
       <div
-        class="box bg-[#161b22] text-white min-h-[208px] w-full hover:[#161b22] transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton bg-[#161b22] text-white min-h-[208px] w-full hover:[#161b22] transition-colors duration-300 rounded-xl flex p-10"
       >
         <Icon icon="mdi:github" class="w-full h-full" />
       </div>
       <div
-        class="box insta text-white min-h-[208px] w-full hover:insta transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton tooltip insta text-white min-h-[208px] w-full hover:insta transition-colors duration-300 rounded-xl flex p-10"
+        data-tip="Instagram"
       >
         <Icon icon="fe:instagram" class="w-full h-full" />
       </div>
       <div
-        class="box bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] transition-colors duration-300 rounded-xl flex p-10"
       >
         <Icon icon="bx:bxl-linkedin" class="w-full h-full" />
       </div>
       <div
-        class="box bg-surface min-h-[208px] w-full hover:bg-surface/5 transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
+        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface/5 transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
           <div
@@ -115,6 +123,8 @@ import gsap from "gsap";
 import { useCurrentTime } from "@/composables/useCurrentTime";
 import { Icon } from "@iconify/vue";
 import Swiper from "@/components/main/Swiper.vue";
+import Tecs from "./Tecs.vue";
+const { toggle } = inject("openMenu");
 
 const { currentTime } = useCurrentTime();
 
@@ -161,15 +171,27 @@ increaseCount();
 
 onMounted(() => {
   gsap.set(".box", {
-    transformOrigin: "bottom",
+    transformOrigin: "top",
     scaleY: 0,
   });
   gsap.to(".box", {
-    duration: 1,
+    duration: 0.5,
     scaleY: 1,
     opacity: 1,
     delay: 0,
-    stagger: 0.2,
+    stagger: 0,
+    ease: "power2.inOut",
+  });
+  gsap.set(".boxButton", {
+    transformOrigin: "top",
+    scaleY: 0,
+  });
+  gsap.to(".boxButton", {
+    duration: 0.5,
+    scaleY: 1,
+    opacity: 1,
+    delay: 0.5,
+    stagger: 0,
     ease: "power2.inOut",
   });
 
@@ -180,20 +202,29 @@ onMounted(() => {
     x: "-100%",
   });
   gsap.to(".inside", {
-    duration: 1,
+    duration: 0.5,
     scaleX: 1,
     x: 0,
     opacity: 1,
-    delay: 2,
+    delay: 0.5,
     ease: "power2.inOut",
   });
 
-  gsap.to(".test", {
-    duration: 1,
-    delay: 2,
+  gsap.to(".arrow", {
+    duration: 0.5,
+    delay: 0.5,
     display: "flex",
     opacity: 1,
     width: "80px",
+    ease: "power2.inOut",
+  });
+
+  gsap.to(".download", {
+    duration: 0.5,
+    delay: 0.5,
+    display: "flex",
+    opacity: 1,
+    height: "80px",
     ease: "power2.inOut",
   });
 });

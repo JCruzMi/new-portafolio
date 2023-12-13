@@ -1,4 +1,5 @@
 <template>
+  <Menu />
   <main
     class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4"
   >
@@ -8,6 +9,12 @@
 
 <script setup>
 import Index from "~/components/main/Index.vue";
+import Menu from "~/components/main/Menu.vue";
+import { useOpen } from "~/composables/useMenu";
+
+const open = useOpen();
+
+provide("openMenu", open);
 </script>
 
 <style>

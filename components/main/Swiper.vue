@@ -15,9 +15,9 @@
     :effect="'creative'"
     :creative-effect="effects[1]"
   >
-    <swiper-slide class="w-full h-full group text-white">
+    <swiper-slide class="w-full h-full group text-white relative">
       <div
-        class="h-full w-full absolute bg-black/40 group-hover:block hidden transition-colors duration-500"
+        class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
       ></div>
       <img
         src="https://picsum.photos/seed/picsum/200/300"
@@ -25,7 +25,9 @@
         class="w-full h-full object-cover rounded-xl z-10"
       />
       <div class="w-full h-full absolute inset-1">
-        <div class="absolute left-4 bottom-4 flex flex-col">
+        <div
+          class="absolute left-4 -bottom-10 flex flex-col group-hover:bottom-4 transition-all"
+        >
           <p class="font-semibold">HKAnime</p>
           <div class="text-sm flex flex-row flex-wrap gap-2">
             <Icon icon="devicon:vuejs" class="w-6 h-6 text-white" />
@@ -36,20 +38,16 @@
             />
           </div>
         </div>
-        <div class="absolute right-4 bottom-4">
+        <div
+          class="absolute right-4 -bottom-10 group-hover:bottom-4 transition-all"
+        >
           <Icon icon="mdi:github" class="w-6 h-6 text-white cursor-pointer" />
-        </div>
-        <div class="absolute right-4 top-2">
-          <Icon
-            icon="tabler:external-link"
-            class="w-6 h-6 text-white cursor-pointer"
-          />
         </div>
       </div>
     </swiper-slide>
-    <swiper-slide class="w-full h-full group text-white">
+    <swiper-slide class="w-full h-full group text-white relative">
       <div
-        class="h-full w-full absolute bg-black/40 group-hover:block hidden transition-colors duration-500"
+        class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
       ></div>
       <img
         src="https://picsum.photos/seed/picsum/200/300"
@@ -57,7 +55,9 @@
         class="w-full h-full object-cover rounded-xl z-10"
       />
       <div class="w-full h-full absolute inset-1">
-        <div class="absolute left-4 bottom-4 flex flex-col">
+        <div
+          class="absolute left-4 -bottom-10 flex flex-col group-hover:bottom-4 transition-all"
+        >
           <p class="font-semibold">HKAnime</p>
           <div class="text-sm flex flex-row flex-wrap gap-2">
             <Icon icon="devicon:vuejs" class="w-6 h-6 text-white" />
@@ -68,14 +68,40 @@
             />
           </div>
         </div>
-        <div class="absolute right-4 bottom-4">
+        <div
+          class="absolute right-4 -bottom-10 group-hover:bottom-4 transition-all"
+        >
           <Icon icon="mdi:github" class="w-6 h-6 text-white cursor-pointer" />
         </div>
-        <div class="absolute right-4 top-2">
-          <Icon
-            icon="tabler:external-link"
-            class="w-6 h-6 text-white cursor-pointer"
-          />
+      </div>
+    </swiper-slide>
+    <swiper-slide class="w-full h-full group text-white relative">
+      <div
+        class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
+      ></div>
+      <img
+        src="https://picsum.photos/seed/picsum/200/300"
+        alt="picsum"
+        class="w-full h-full object-cover rounded-xl z-10"
+      />
+      <div class="w-full h-full absolute inset-1">
+        <div
+          class="absolute left-4 -bottom-10 flex flex-col group-hover:bottom-4 transition-all"
+        >
+          <p class="font-semibold">HKAnime</p>
+          <div class="text-sm flex flex-row flex-wrap gap-2">
+            <Icon icon="devicon:vuejs" class="w-6 h-6 text-white" />
+            <Icon icon="devicon:tailwindcss" class="w-6 h-6 text-white" />
+            <Icon
+              icon="vscode-icons:file-type-firebase"
+              class="w-6 h-6 text-white"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute right-4 -bottom-10 group-hover:bottom-4 transition-all"
+        >
+          <Icon icon="mdi:github" class="w-6 h-6 text-white cursor-pointer" />
         </div>
       </div>
     </swiper-slide>
@@ -165,16 +191,16 @@ const effects = [
 onMounted(() => {
   gsap.set(".swiper", {
     transformOrigin: "left",
-    scaleX: 0,
+    scale: 1,
     opacity: 1,
-    x: "-100%",
+    y: "300%",
   });
   gsap.to(".swiper", {
-    duration: 1,
-    scaleX: 1,
-    x: 0,
+    duration: 0.5,
+    scale: 1,
+    y: 0,
     opacity: 1,
-    delay: 2,
+    delay: 0.5,
     ease: "power2.inOut",
   });
 });
