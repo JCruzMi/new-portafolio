@@ -2,6 +2,9 @@
   <Menu />
   <main
     class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4"
+    :class="{
+      'overflow-y-hidden max-h-screen': open.open,
+    }"
   >
     <Index />
   </main>
