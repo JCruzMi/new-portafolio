@@ -58,7 +58,7 @@
             </div>
             <div
               @click="toggle"
-              class="hidden sm:flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="max-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <Icon icon="ph:list-bold" class="w-10 h-10" />
             </div>

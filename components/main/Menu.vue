@@ -3,7 +3,7 @@
     class="menuBg opacity-0 w-full min-h-screen items-center justify-center bg-background fixed z-50 inset-0 md:p-10"
   >
     <div
-      class="mx-auto max-w-7xl w-full h-full flex flex-col gap-3 justify-end items-end lg:p-8 md:p-8 p-4 overflow-hidden"
+      class="mx-auto w-full h-full flex flex-col gap-3 justify-end items-end lg:p-8 md:p-8 p-4 overflow-hidden"
     >
       <div class="flex w-full justify-between items-center">
         <h1 class="text-3xl font-bold textName">Juan David Cruz</h1>
@@ -18,7 +18,7 @@
         </button>
       </div>
       <div
-        class="menu uppercase text-5xl md:text-8xl font-bold bg-surface items-center justify-center w-full h-full rounded-xl p-10 gap-6"
+        class="menu uppercase text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-bold bg-surface items-center justify-center w-full h-full rounded-xl p-10 gap-6"
       >
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
