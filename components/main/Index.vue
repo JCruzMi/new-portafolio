@@ -21,7 +21,7 @@
           </div>
         </div>
         <div
-          class="arrow justify-center items-center hidden min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
+          class="arrow justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
         >
           <Icon
             icon="material-symbols:arrow-forward-ios"
@@ -58,9 +58,9 @@
             </div>
             <div
               @click="toggle"
-              class="max-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="max-w-[60px] min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
-              <Icon icon="ph:list-bold" class="w-10 h-10" />
+              <Icon icon="ph:list-bold" class="w-8 h-8" />
             </div>
           </div>
           <div
@@ -214,7 +214,8 @@ onMounted(() => {
     delay: 0.5,
     display: "flex",
     opacity: 1,
-    width: "80px",
+    width: "60px",
+    minWidth: "60px",
     ease: "power2.inOut",
   });
 
@@ -223,7 +224,8 @@ onMounted(() => {
     delay: 0.5,
     display: "flex",
     opacity: 1,
-    height: "80px",
+    height: "60px",
+    minHeight: "60px",
     ease: "power2.inOut",
   });
 });
