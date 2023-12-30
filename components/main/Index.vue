@@ -9,9 +9,11 @@
         class="box min-h-[208px] col-[auto_/_span_2] order-0 h-full items-start self-start rounded-xl flex gap-3 flex-nowrap flex-row justify-center justify-self-start relative w-full overflow-hidden"
       >
         <div
-          class="bg-black w-full h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300 p-10"
+          class="bg-black w-full bg-cover bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300 p-10"
         >
-          <h1 class="inside text-3xl md:text-6xl font-bold text-text uppercase">
+          <h1
+            class="inside text-3xl md:text-6xl font-bold text-text uppercase drop-shadow-2xl bg-gradient-to-r from-white via-primary to-primary inline-block text-transparent bg-clip-text"
+          >
             Juan David Cruz
           </h1>
           <div
@@ -54,7 +56,9 @@
             <div
               class="flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
-              <p class="w-full">Descargar CV</p>
+              <a target="_blank" href="./docs/CV_Juan.pdf" class="w-full"
+                >Descargar CV</a
+              >
             </div>
             <div
               @click="toggle"
