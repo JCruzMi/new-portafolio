@@ -20,7 +20,7 @@
         class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
       ></div>
       <img
-        src="https://picsum.photos/seed/picsum/200/300"
+        src="https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg"
         alt="picsum"
         class="w-full h-full object-cover rounded-xl z-10"
       />
@@ -50,7 +50,7 @@
         class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
       ></div>
       <img
-        src="https://picsum.photos/seed/picsum/200/300"
+        src="https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg"
         alt="picsum"
         class="w-full h-full object-cover rounded-xl z-10"
       />
@@ -80,7 +80,7 @@
         class="w-full absolute bottom-0 bg-black/40 group-hover:h-full h-[0] transition-all"
       ></div>
       <img
-        src="https://picsum.photos/seed/picsum/200/300"
+        src="https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg"
         alt="picsum"
         class="w-full h-full object-cover rounded-xl z-10"
       />

@@ -8,22 +8,23 @@
       <div
         class="box min-h-[208px] col-[auto_/_span_2] order-0 h-full items-start self-start rounded-xl flex gap-3 flex-nowrap flex-row justify-center justify-self-start relative w-full overflow-hidden"
       >
-        <div
-          class="bg-black w-full bg-cover bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300 p-10"
-        >
-          <h1
-            class="inside text-3xl md:text-6xl font-bold text-text uppercase drop-shadow-2xl bg-gradient-to-r from-white via-primary to-primary inline-block text-transparent bg-clip-text"
-          >
-            Juan David Cruz
-          </h1>
+        <Zcard :light="false" :class="'!p-0 h-full'">
           <div
-            class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center"
+            class="cursor-default w-full bg-cover bg-center bg-no-repeat bg-[url('https://e1.pxfuel.com/desktop-wallpaper/270/660/desktop-wallpaper-urban-japan-japanese-retro-street-art-purple.jpg')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300 p-10"
           >
-            <p>SOBRE MI</p>
-          </div>
-        </div>
+            <div
+              class="h-full w-full absolute left-0 top-0 right-0 bottom-0 bg-black/40 z-0"
+            ></div>
+            <h1
+              class="inside text-3xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
+            >
+              Juan David Cruz
+              <p class="text-2xl text-white/90">Frontend Developer</p>
+            </h1>
+          </div></Zcard
+        >
         <div
-          class="arrow justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface/5 transition-colors duration-300"
+          class="arrow justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300"
         >
           <Icon
             icon="material-symbols:arrow-forward-ios"
@@ -32,18 +33,30 @@
         </div>
       </div>
       <div
-        class="box bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface/5 transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
+        class="box p-4 bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface transition-colors duration-300 rounded-xl flex flex-col gap-2 h-full justify-start justify-self-start relative w-full overflow-hidden"
       >
-        <Tecs />
-        <div class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center">
+        <div class="p-0 flex gap-4 items-center w-full">
           <p class="uppercase">Tecnologías</p>
+        </div>
+        <div class="px-4 h-full flex justify-center">
+          <Tecs />
         </div>
       </div>
       <div
-        class="box mail min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start hover:mail transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start p-10 relative w-full overflow-hidden"
+        class="box bg-surface min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start relative w-full overflow-hidden"
       >
-        <div class="w-full p-14">
-          <Icon icon="ic:round-email" class="w-full h-full text-white" />
+        <div
+          class="w-full flex-col gap-4 text-white text-6xl flex justify-center items-center"
+        >
+          <p class="h-full">Hablemos</p>
+          <a
+            class="btn bg-background text-white text-xl py-6 h-auto font-bold rounded-full hover:bg-background lowercase"
+            href="mailto:juan.murato.cruz@gmail.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <p>juan.murato.cruz@gmail.com</p>
+          </a>
         </div>
       </div>
       <div
@@ -54,7 +67,7 @@
             class="download flex w-full font-semibold text-white h-0 flex-row gap-3"
           >
             <div
-              class="flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <a target="_blank" href="./docs/CV_Juan.pdf" class="w-full"
                 >Descargar CV</a
@@ -62,20 +75,18 @@
             </div>
             <div
               @click="toggle"
-              class="max-w-[60px] min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface/5 bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="max-w-[60px] btn min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <Icon icon="ph:list-bold" class="w-8 h-8" />
             </div>
           </div>
           <div
-            class="flex w-full h-full hover:bg-surface/5 transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
+            class="flex flex-col w-full h-full hover:bg-surface transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
           >
+            <div class="pb-2 flex gap-4 items-center w-full">
+              <p class="uppercase">Proyectos</p>
+            </div>
             <Swiper />
-          </div>
-          <div
-            class="absolute right-0 bottom-0 p-4 px-6 flex gap-4 items-center"
-          >
-            <p class="uppercase">Proyectos</p>
           </div>
         </div>
       </div>
@@ -99,7 +110,7 @@
         <Icon icon="bx:bxl-linkedin" class="w-full h-full" />
       </div>
       <div
-        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface/5 transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
+        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
           <div
@@ -127,6 +138,7 @@ import { useCurrentTime } from "@/composables/useCurrentTime";
 import { Icon } from "@iconify/vue";
 import Swiper from "@/components/main/Swiper.vue";
 import Tecs from "./Tecs.vue";
+import Zcard from "../ui/Zcard.vue";
 const { toggle } = inject("openMenu");
 
 const { currentTime } = useCurrentTime();

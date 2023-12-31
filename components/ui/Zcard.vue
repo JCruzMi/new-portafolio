@@ -46,7 +46,7 @@ const rotationLight = computed(() =>
 </script>
 <template>
   <div class="w-full lg:p-4 relative group" :class="class" ref="target">
-    <div class="w-full h-full p-1 card overflow-hidden">
+    <div class="w-full h-full p-0 card overflow-hidden">
       <span
         v-if="light"
         class="atropos-highlight transition-all ease-in-out group-hover:opacity-100"
@@ -83,5 +83,4 @@ const rotationLight = computed(() =>
   );
   z-index: 1;
 }
-
 </style>

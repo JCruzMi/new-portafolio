@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0c1016;
+  background-color: #010101;
 }
 
 @font-face {
@@ -17,4 +17,17 @@ body {
   .balance {
     text-wrap: balance;
   }
+  .btn {
+    @apply border-0;
+  }
+}
+
+.tooltip:before {
+  background-color: #010101;
+  color: white;
+}
+
+.tooltip:after,
+.tooltip-top:after {
+  border-color: #010101 transparent transparent transparent;
 }

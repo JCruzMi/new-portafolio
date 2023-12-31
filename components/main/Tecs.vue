@@ -10,10 +10,13 @@
       <Icon icon="devicon:react" class="w-10 h-10 icon" />
     </div>
     <div class="tooltip tooltip-primary" data-tip="Next js">
-      <Icon icon="devicon:nextjs" class="w-10 h-10 icon" />
+      <Icon icon="cib:next-js" class="w-10 h-10 icon text-white" />
     </div>
     <div class="tooltip tooltip-primary" data-tip="Astro js">
-      <Icon icon="devicon:astro" class="w-10 h-10 icon" />
+      <Icon
+        icon="vscode-icons:file-type-astro"
+        class="w-10 h-10 icon text-white"
+      />
     </div>
     <div class="tooltip tooltip-primary" data-tip="HTML5">
       <Icon icon="devicon:html5" class="w-10 h-10 icon" />

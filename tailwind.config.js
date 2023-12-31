@@ -14,8 +14,8 @@ export default {
         primary: ["Geist"],
       },
       colors: {
-        background: "#0c1016",
-        surface: "rgba(255, 255, 255, .08)",
+        background: "#010101",
+        surface: "rgba(20, 20, 20, 1)",
         primary: "#007acc",
         text: "#ffffff",
         secondary: "#FF9800",
