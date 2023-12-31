@@ -20,6 +20,9 @@ body {
   .btn {
     @apply border-0;
   }
+  .borderBox {
+    @apply border-[1px] border-background hover:border-[#292929] transition-all duration-500;
+  }
 }
 
 .tooltip:before {

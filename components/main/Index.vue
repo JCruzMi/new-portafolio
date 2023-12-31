@@ -24,7 +24,7 @@
           </div></Zcard
         >
         <div
-          class="arrow justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300"
+          class="arrow borderBox justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300"
         >
           <Icon
             icon="material-symbols:arrow-forward-ios"
@@ -33,22 +33,22 @@
         </div>
       </div>
       <div
-        class="box p-4 bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface transition-colors duration-300 rounded-xl flex flex-col gap-2 h-full justify-start justify-self-start relative w-full overflow-hidden"
+        class="box p-4 borderBox bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface transition-colors duration-300 rounded-xl flex flex-col gap-2 h-full justify-start justify-self-start relative w-full overflow-hidden"
       >
         <div class="p-0 flex gap-4 items-center w-full">
-          <p class="uppercase">Tecnologías</p>
+          <p class="uppercase cursor-default">Tecnologías</p>
         </div>
         <div class="px-4 h-full flex justify-center">
           <Tecs />
         </div>
       </div>
       <div
-        class="box bg-surface min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start relative w-full overflow-hidden"
+        class="box borderBox bg-surface min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start relative w-full overflow-hidden"
       >
         <div
           class="w-full flex-col gap-4 text-white text-6xl flex justify-center items-center"
         >
-          <p class="h-full">Hablemos</p>
+          <p class="h-full cursor-default">Hablemos</p>
           <a
             class="btn bg-background text-white text-xl py-6 h-auto font-bold rounded-full hover:bg-background lowercase"
             href="mailto:juan.murato.cruz@gmail.com"
@@ -67,7 +67,7 @@
             class="download flex w-full font-semibold text-white h-0 flex-row gap-3"
           >
             <div
-              class="flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="flex text-center borderBox w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <a target="_blank" href="./docs/CV_Juan.pdf" class="w-full"
                 >Descargar CV</a
@@ -75,16 +75,16 @@
             </div>
             <div
               @click="toggle"
-              class="max-w-[60px] btn min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="max-w-[60px] borderBox min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <Icon icon="ph:list-bold" class="w-8 h-8" />
             </div>
           </div>
           <div
-            class="flex flex-col w-full h-full hover:bg-surface transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
+            class="flex borderBox flex-col w-full h-full hover:bg-surface transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
           >
             <div class="pb-2 flex gap-4 items-center w-full">
-              <p class="uppercase">Proyectos</p>
+              <p class="uppercase cursor-default">Proyectos</p>
             </div>
             <Swiper />
           </div>
@@ -95,22 +95,22 @@
       class="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
     >
       <div
-        class="boxButton bg-[#161b22] text-white min-h-[208px] w-full hover:[#161b22] transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton bg-surface text-white min-h-[208px] w-full rounded-xl flex p-10"
       >
         <Icon icon="mdi:github" class="w-full h-full" />
       </div>
       <div
-        class="boxButton insta text-white min-h-[208px] w-full hover:insta transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton insta text-white min-h-[208px] w-full hover:insta rounded-xl flex p-10"
       >
         <Icon icon="fe:instagram" class="w-full h-full" />
       </div>
       <div
-        class="boxButton bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] transition-colors duration-300 rounded-xl flex p-10"
+        class="boxButton bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] rounded-xl flex p-10"
       >
         <Icon icon="bx:bxl-linkedin" class="w-full h-full" />
       </div>
       <div
-        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface transition-colors duration-300 rounded-xl flex items-center justify-center p-10"
+        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-center p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
           <div
@@ -251,34 +251,10 @@ onMounted(() => {
 .gradient-border {
   position: relative;
   border-radius: 0.5rem;
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   width: 100%;
 }
-@media (prefers-color-scheme: light) {
-  .gradient-border::before {
-    background: linear-gradient(
-      90deg,
-      #e2e2e2 0%,
-      #e2e2e2 25%,
-      #00dc82 50%,
-      #36e4da 75%,
-      #0047e1 100%
-    );
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .gradient-border::before {
-    background: linear-gradient(
-      90deg,
-      #303030 0%,
-      #303030 25%,
-      #00dc82 50%,
-      #36e4da 75%,
-      #0047e1 100%
-    );
-  }
-}
+
 .gradient-border::before {
   content: "";
   position: absolute;
@@ -293,14 +269,11 @@ onMounted(() => {
   background-position: 0 0;
   opacity: 0.5;
   transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  mask: linear-gradient(#ffffff95 0 0);
+
   z-index: -1;
 }
 .gradient-border:hover::before {
-  background-position: -50% 0;
   opacity: 1;
 }
 
