@@ -92,40 +92,43 @@
       </div>
     </div>
     <div
-      class="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
+      class="boxButton w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
     >
       <div
-        class="boxButton bg-surface text-white min-h-[208px] w-full rounded-xl flex p-10"
+        class="bg-surface text-white min-h-[208px] w-full rounded-xl flex p-10"
       >
         <Icon icon="mdi:github" class="w-full h-full" />
       </div>
       <div
-        class="boxButton insta text-white min-h-[208px] w-full hover:insta rounded-xl flex p-10"
+        class="insta text-white min-h-[208px] w-full hover:insta rounded-xl flex p-10"
       >
         <Icon icon="fe:instagram" class="w-full h-full" />
       </div>
       <div
-        class="boxButton bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] rounded-xl flex p-10"
+        class="bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] rounded-xl flex p-10"
       >
         <Icon icon="bx:bxl-linkedin" class="w-full h-full" />
       </div>
       <div
-        class="boxButton bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-center p-10"
+        class="bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
-          <div
-            class="flex flex-row justify-start gap-1 w-auto text-2xl font-bold"
-          >
-            <span class="w-auto text-6xl flex justify-end items-end">{{
-              formatedNum
-            }}</span>
-            <span class="flex w-full justify-start items-end text-2xl">{{
-              mounth
-            }}</span>
+          <div class="flex flex-row justify-start gap-1 w-auto text-2xl">
+            <div
+              class="w-auto flex-col text-2xl font-normal gap-4 flex justify-start items-start"
+            >
+              <div class="p-0 bg-success rounded-full">
+                <Icon
+                  icon="material-symbols-light:check-small-rounded"
+                  class="w-24 h-24 text-background"
+                />
+              </div>
+              <div class="text-6xl font-bold">
+                <Numbers :maxValue="10" />
+              </div>
+              proyectos
+            </div>
           </div>
-          <p class="text-3xl md:text-6xl font-bold">
-            {{ currentTime.toLocaleTimeString().slice(0, -5) }}
-          </p>
         </div>
       </div>
     </div>
@@ -134,55 +137,12 @@
 
 <script setup>
 import gsap from "gsap";
-import { useCurrentTime } from "@/composables/useCurrentTime";
 import { Icon } from "@iconify/vue";
 import Swiper from "@/components/main/Swiper.vue";
 import Tecs from "./Tecs.vue";
 import Zcard from "../ui/Zcard.vue";
+import Numbers from "../ui/Numbers.vue";
 const { toggle } = inject("openMenu");
-
-const { currentTime } = useCurrentTime();
-
-const month_names_short = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
-const mounth = ref(month_names_short[new Date().getMonth()]);
-
-const data = reactive({
-  num: 0,
-  maxNum: 0,
-});
-
-function increaseCount() {
-  data.num = new Date().getDate();
-}
-
-watch(data, (newValue, oldValue) => {
-  gsap.to(data, {
-    duration: 0.5,
-    delay: 2,
-    maxNum: newValue.num,
-    ease: "none",
-  });
-});
-
-const formatedNum = computed(() => {
-  return Math.round(data.maxNum);
-});
-
-increaseCount();
 
 onMounted(() => {
   gsap.set(".box", {
