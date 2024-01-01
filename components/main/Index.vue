@@ -38,7 +38,7 @@
         <div class="p-0 flex gap-4 items-center w-full">
           <p class="uppercase cursor-default">Tecnologías</p>
         </div>
-        <div class="px-4 h-full flex justify-center">
+        <div class="px-4 h-full flex-col gap-4 flex justify-center">
           <Tecs />
         </div>
       </div>
@@ -87,6 +87,9 @@
               <p class="uppercase cursor-default">Proyectos</p>
             </div>
             <Swiper />
+            <div class="btn bg-background rounded-full w-full mt-4">
+              Ver todos
+            </div>
           </div>
         </div>
       </div>
