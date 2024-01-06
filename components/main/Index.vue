@@ -38,7 +38,9 @@
         <div class="p-0 flex gap-4 items-center w-full">
           <p class="uppercase cursor-default">Tecnologías</p>
         </div>
-        <div class="px-4 h-full flex-col gap-4 flex justify-center">
+        <div
+          class="px-4 h-full flex-col gap-4 flex justify-center min-h-[128px]"
+        >
           <Tecs />
         </div>
       </div>
@@ -60,7 +62,7 @@
         </div>
       </div>
       <div
-        class="box min-h-[208px] lg:row-[auto_/_span_2] md:col-[auto_/_span_2] lg:col-auto order-2 h-full items-start self-start flex flex-col gap-3 justify-start justify-self-start relative w-full overflow-hidden"
+        class="box max-h-[538px] lg:row-[auto_/_span_2] md:row-span-2 lg:col-auto md:order-3 order-2 lg:order-2 h-full items-start self-start flex flex-col gap-3 justify-start justify-self-start relative w-full overflow-hidden"
       >
         <div class="flex flex-col gap-3 relative w-full h-full">
           <div
@@ -87,7 +89,9 @@
               <p class="uppercase cursor-default">Proyectos</p>
             </div>
             <Swiper />
-            <div class="btn bg-background rounded-full w-full mt-4">
+            <div
+              class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+            >
               Ver todos
             </div>
           </div>
@@ -95,25 +99,36 @@
       </div>
     </div>
     <div
-      class="boxButton w-full grid grid-cols-2 lg:grid-cols-4 gap-3 h-full justify-center justify-self-start relative"
+      class="boxButton w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-3 h-full justify-center justify-self-start relative"
     >
       <div
-        class="bg-surface text-white min-h-[208px] w-full rounded-xl flex p-10"
+        class="bg-surface flex-col order-1 col-span-2 justify-between lg:col-span-3 min-h-[208px] w-full rounded-xl flex p-4"
       >
-        <Icon icon="mdi:github" class="w-full h-full" />
+        <div class="pb-2 flex gap-4 items-center w-full">
+          <p class="uppercase cursor-default">Experiencia</p>
+        </div>
+        <p>WIP</p>
+        <div
+          class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+        >
+          Ver todos
+        </div>
       </div>
       <div
-        class="insta text-white min-h-[208px] w-full hover:insta rounded-xl flex p-10"
+        class="md:order-3 flex-col order-3 col-span-1 bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex p-4"
       >
-        <Icon icon="fe:instagram" class="w-full h-full" />
+        <div class="pb-2 flex gap-4 items-center w-full">
+          <p class="uppercase cursor-default">Redes</p>
+        </div>
+        <div
+          class="flex w-full h-full flex-col justify-center items-center gap-8"
+        >
+          <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
+          <Icon icon="mdi:github" class="w-16 h-16 text-white" />
+        </div>
       </div>
       <div
-        class="bg-[#0E76A8] text-white min-h-[208px] w-full hover:bg-[#0E76A8] rounded-xl flex p-10"
-      >
-        <Icon icon="bx:bxl-linkedin" class="w-full h-full" />
-      </div>
-      <div
-        class="bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-10"
+        class="md:order-2 col-span-1 lg:col-span-2 lg:order-3 order-2 bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-10"
       >
         <div class="flex gap-2 text-white flex-col cursor-default">
           <div class="flex flex-row justify-start gap-1 w-auto text-2xl">
@@ -210,55 +225,4 @@ onMounted(() => {
 });
 </script>
 
-<style>
-.gradient-border {
-  position: relative;
-  border-radius: 0.5rem;
-  backdrop-filter: blur(10px);
-  width: 100%;
-}
-
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0.5rem;
-  padding: 2px;
-  width: 100%;
-  background-size: 400% auto;
-  background-position: 0 0;
-  opacity: 0.5;
-  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
-  mask: linear-gradient(#ffffff95 0 0);
-
-  z-index: -1;
-}
-.gradient-border:hover::before {
-  opacity: 1;
-}
-
-.insta {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5851db,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d
-  );
-}
-
-.mail {
-  background: rgb(227, 123, 70);
-  background: linear-gradient(
-    315deg,
-    rgba(227, 123, 70, 1) 3%,
-    rgba(198, 51, 92, 1) 44%,
-    rgba(86, 50, 139, 1) 85%
-  );
-}
-</style>
+<style></style>
