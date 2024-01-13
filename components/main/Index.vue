@@ -92,7 +92,7 @@
             <div
               class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
             >
-              Ver todos
+              Ver todo
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
         <div
           class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
         >
-          Ver todos
+          Ver todo
         </div>
       </div>
       <div
@@ -123,12 +123,20 @@
         <div
           class="flex w-full h-full flex-col justify-center items-center gap-8"
         >
-          <div class="p-2 borderBox hover:border-success rounded-lg">
+          <a
+            href="https://www.linkedin.com/in/juan-david-cruz-huan/"
+            target="_blank"
+            class="p-2 borderBox hover:border-success rounded-lg"
+          >
             <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
-          </div>
-          <div class="p-2 borderBox hover:border-success rounded-lg">
+          </a>
+          <a
+            href="https://github.com/JCruzMi"
+            target="_blank"
+            class="p-2 borderBox hover:border-success rounded-lg"
+          >
             <Icon icon="mdi:github" class="w-16 h-16 text-white" />
-          </div>
+          </a>
         </div>
       </div>
       <div

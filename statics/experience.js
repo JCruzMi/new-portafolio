@@ -1,14 +1,16 @@
 const experience = [
   {
     name: "Wludo",
+    time: "Abril 2022 - Octubre 2022",
     description: ["Actualización y migración de interfaz gráfica"],
-    link: "",
+    link: "https://wludo.online",
     role: "Desarrollador Front-end",
   },
   {
     name: "Inkoms",
+    time: "Octubre 2022 - Actualmente",
     description: [
-      "Asumí el papel de líder en el desarrollo front-end de la aplicación web",
+      "Asumí el papel de líder en el desarrollo front-end",
       "Realicé la integración de la aplicación Android",
     ],
     link: "https://www.inkoms.com",

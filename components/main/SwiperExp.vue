@@ -1,6 +1,6 @@
 <template>
   <swiper
-    class="swiper h-auto w-full rounded-xl"
+    class="swiper h-auto w-full"
     :slides-per-view="1"
     :modules="modules"
     :space-between="20"
@@ -11,6 +11,7 @@
       delay: 2500,
       pauseOnMouseEnter: true,
     }"
+    :pagination="{ type: 'progressbar' }"
     :grab-cursor="true"
     :effect="'creative'"
     :creative-effect="effects[1]"
@@ -19,9 +20,14 @@
       <swiper-slide
         class="w-full h-auto group text-white relative p-4 rounded-xl bg-background"
       >
-        <div class="flex flex-col gap-4">
-          <div class="flex gap-4 w-full items-center justify-between">
-            <p class="font-semibold text-xl">{{ experience.name }}</p>
+        <div class="flex flex-col gap-2">
+          <div class="flex gap-2 w-full items-center justify-between">
+            <p class="font-semibold text-xl">
+              {{ experience.name }}
+              <span class="text-xs font-light text-white/90">{{
+                experience.time
+              }}</span>
+            </p>
             <a target="_blank" :href="experience.link">
               <Icon
                 icon="material-symbols-light:arrow-circle-right-outline-rounded"
@@ -30,7 +36,11 @@
             </a>
           </div>
           <p>{{ experience.role }}</p>
-          <ul v-for="description in experience.description" :key="description">
+          <ul
+            v-for="description in experience.description"
+            :key="description"
+            class="list-disc list-inside text-sm"
+          >
             <li>{{ description }}</li>
           </ul>
         </div>
@@ -42,7 +52,7 @@
 import gsap from "gsap";
 
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Keyboard, EffectCreative } from "swiper/modules";
+import { Autoplay, Keyboard, EffectCreative, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
 import "swiper/css/effect-creative";
@@ -51,7 +61,7 @@ import { useExperience } from "~/composables/useExperience";
 
 const { experienceList } = useExperience();
 
-const modules = [Keyboard, EffectCreative, Autoplay];
+const modules = [Keyboard, EffectCreative, Autoplay, Pagination];
 
 const effects = [
   {
