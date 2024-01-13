@@ -102,12 +102,12 @@
       class="boxButton w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-3 h-full justify-center justify-self-start relative"
     >
       <div
-        class="bg-surface flex-col order-1 col-span-2 justify-between lg:col-span-3 min-h-[208px] w-full rounded-xl flex p-4"
+        class="bg-surface borderBox flex-col order-1 col-span-2 justify-between lg:col-span-3 min-h-[208px] w-full rounded-xl flex p-4"
       >
         <div class="pb-2 flex gap-4 items-center w-full">
           <p class="uppercase cursor-default">Experiencia</p>
         </div>
-        <p>WIP</p>
+        <SwiperExp />
         <div
           class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
         >
@@ -115,7 +115,7 @@
         </div>
       </div>
       <div
-        class="md:order-3 flex-col order-3 col-span-1 bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex p-4"
+        class="md:order-3 borderBox flex-col order-3 col-span-1 bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex p-4"
       >
         <div class="pb-2 flex gap-4 items-center w-full">
           <p class="uppercase cursor-default">Redes</p>
@@ -123,8 +123,12 @@
         <div
           class="flex w-full h-full flex-col justify-center items-center gap-8"
         >
-          <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
-          <Icon icon="mdi:github" class="w-16 h-16 text-white" />
+          <div class="p-2 borderBox hover:border-success rounded-lg">
+            <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
+          </div>
+          <div class="p-2 borderBox hover:border-success rounded-lg">
+            <Icon icon="mdi:github" class="w-16 h-16 text-white" />
+          </div>
         </div>
       </div>
       <div
@@ -157,6 +161,7 @@
 import gsap from "gsap";
 import { Icon } from "@iconify/vue";
 import Swiper from "@/components/main/Swiper.vue";
+import SwiperExp from "@/components/main/SwiperExp.vue";
 import Tecs from "./Tecs.vue";
 import Zcard from "../ui/Zcard.vue";
 import Numbers from "../ui/Numbers.vue";
