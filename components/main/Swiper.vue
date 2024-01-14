@@ -1,7 +1,7 @@
 <template>
   <swiper
     class="swiper h-full w-full xs:min-h-[338px] max-h-[338px] rounded-xl aspect-square"
-    :slides-per-view="1"
+    :slides-per-view="0.9"
     :modules="modules"
     :space-between="20"
     :loop="true"
@@ -23,13 +23,20 @@
         <img
           :src="project.image"
           :alt="project.name"
-          class="w-full h-full object-cover rounded-xl z-10"
+          class="w-full h-full object-cover bg-no-repeat rounded-xl z-10"
         />
         <div class="w-full h-full absolute inset-1">
           <div
-            class="absolute left-4 -bottom-10 flex flex-col group-hover:bottom-4 transition-all"
+            class="absolute left-4 -bottom-12 flex flex-col group-hover:bottom-4 transition-all"
           >
-            <p class="font-semibold">{{ project.name }}</p>
+            <p class="font-semibold flex gap-2 items-center">
+              {{ project.name }}
+              <a :href="project.link" target="_blank"
+                ><Icon
+                  icon="solar:square-share-line-outline"
+                  class="w-4 h-4 hover:text-success transition-colors duration-300"
+              /></a>
+            </p>
             <div class="text-sm flex flex-row flex-wrap gap-2">
               <template v-for="tags in project.tags" : :key="tags">
                 <Tags :icon="tags" />

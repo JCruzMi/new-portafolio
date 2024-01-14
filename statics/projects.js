@@ -19,7 +19,7 @@ const projects = [
   {
     name: "HKanime",
     description: "Web para visualizar animes",
-    image: "images/portfolio/hkanime.png",
+    image: "images/portfolio/hkanime.webp",
     github: "https://github.com/JCruzMi/hkanime",
     link: "https://hkanime.vercel.app",
     tags: [
@@ -29,31 +29,24 @@ const projects = [
     ],
   },
   {
-    name: "Project 2",
-    description: "This is the first project",
-    image:
-      "https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg",
-    link: "https://www.google.com",
-    github: "https://github.com/JCruzMi/hkanime",
-    tags: ["devicon:vuejs", "devicon:tailwindcss"],
+    name: "Luma",
+    description: "Wep para guardar y compartir todas tus redes",
+    image: "images/portfolio/luma.webp",
+    link: "https://luma-huan.vercel.app/",
+    github: "https://github.com/JCruzMi/ShareProfile",
+    tags: [
+      "devicon:vuejs",
+      "devicon:tailwindcss",
+      "vscode-icons:file-type-firebase",
+    ],
   },
   {
-    name: "Project 3",
-    description: "This is the first project",
-    image:
-      "https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg",
-    link: "https://www.google.com",
-    github: "https://github.com/JCruzMi/hkanime",
-    tags: ["devicon:vuejs", "devicon:tailwindcss"],
-  },
-  {
-    name: "Project 4",
-    description: "This is the first project",
-    image:
-      "https://e1.pxfuel.com/desktop-wallpaper/685/319/desktop-wallpaper-japan-street-illustration-digital-art-japanese-city-anime.jpg",
-    link: "https://www.google.com",
-    github: "https://github.com/JCruzMi/hkanime",
-    tags: ["devicon:vuejs", "devicon:tailwindcss"],
+    name: "Inkoms",
+    description: "Marketplace de Inversiones",
+    image: "images/portfolio/inkoms.webp",
+    link: "https://www.inkoms.com",
+    // github: "https://github.com/JCruzMi/ShareProfile",
+    tags: ["cib:next-js", "devicon:tailwindcss", "devicon:typescript"],
   },
 ];
 

@@ -10,7 +10,7 @@
       >
         <Zcard :light="false" :class="'!p-0 h-full'">
           <div
-            class="cursor-default w-full bg-cover bg-center bg-no-repeat bg-[url('/images/portfolio/bgJp.jpg')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300 p-10"
+            class="cursor-default w-full bg-cover bg-center bg-no-repeat bg-[url('/images/portfolio/bgJp.webp')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300 p-10"
           >
             <div
               class="h-full w-full absolute left-0 top-0 right-0 bottom-0 bg-black/40 z-0"
