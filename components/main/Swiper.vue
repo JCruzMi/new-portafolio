@@ -1,7 +1,7 @@
 <template>
   <swiper
     class="swiper h-full w-full xs:min-h-[338px] max-h-[338px] rounded-xl aspect-square"
-    :slides-per-view="0.9"
+    :slides-per-view="1"
     :modules="modules"
     :space-between="20"
     :loop="true"

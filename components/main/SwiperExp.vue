@@ -7,13 +7,13 @@
     :loop="false"
     :centered-slides="true"
     :keyboard="{ enabled: false }"
+    :pagination="{ type: 'progressbar' }"
+    :grab-cursor="true"
+    :effect="'creative'"
     :autoplay="{
       delay: 2500,
       pauseOnMouseEnter: true,
     }"
-    :pagination="{ type: 'progressbar' }"
-    :grab-cursor="true"
-    :effect="'creative'"
     :creative-effect="effects[1]"
   >
     <template v-for="experience in experienceList" :key="experience.name">
@@ -61,7 +61,7 @@ import { useExperience } from "~/composables/useExperience";
 
 const { experienceList } = useExperience();
 
-const modules = [Keyboard, EffectCreative, Autoplay, Pagination];
+const modules = [Keyboard, EffectCreative, Pagination];
 
 const effects = [
   {
