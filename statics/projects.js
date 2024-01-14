@@ -23,7 +23,7 @@ const projects = [
     github: "https://github.com/JCruzMi/hkanime",
     link: "https://hkanime.vercel.app",
     tags: [
-      "devicon:nuxtjs",
+      "devicon:vuejs",
       "devicon:tailwindcss",
       "vscode-icons:file-type-firebase",
     ],
