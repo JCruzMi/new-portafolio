@@ -27,15 +27,16 @@
         />
         <div class="w-full h-full absolute inset-1">
           <div
-            class="absolute left-4 -bottom-12 flex flex-col group-hover:bottom-4 transition-all"
+            class="absolute left-4 -bottom-16 flex flex-col group-hover:bottom-4 transition-all"
           >
-            <p class="font-semibold flex gap-2 items-center">
+            <p class="font-semibold flex gap-2 text-xl items-center my-2">
               {{ project.name }}
-              <a :href="project.link" target="_blank"
-                ><Icon
-                  icon="solar:square-share-line-outline"
-                  class="w-4 h-4 hover:text-success transition-colors duration-300"
-              /></a>
+              <a :href="project.link" target="_blank">
+                <Icon
+                  icon="material-symbols-light:arrow-circle-right-outline-rounded"
+                  class="w-10 h-10 text-white hover:text-success transition-all duration-300"
+                />
+              </a>
             </p>
             <div class="text-sm flex flex-row flex-wrap gap-2">
               <template v-for="tags in project.tags" : :key="tags">

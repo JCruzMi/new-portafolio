@@ -23,6 +23,7 @@
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
             class="textShow overflow-hidden group-hover:text-white transition-colors"
+            @click="pushTo('/')"
           >
             Inicio
           </p>
@@ -33,6 +34,7 @@
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
             class="textShow overflow-hidden group-hover:text-white transition-colors"
+            @click="pushTo('/about')"
           >
             Sobre mi
           </p>
@@ -43,6 +45,7 @@
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
             class="textShow translate-x-0 overflow-hidden group-hover:text-white transition-colors"
+            @click="pushTo('/projects')"
           >
             Proyectos
           </p>
@@ -68,6 +71,7 @@
 <script setup>
 import gsap from "gsap";
 import { Icon } from "@iconify/vue";
+const router = useRouter();
 
 const { open, toggle } = inject("openMenu");
 
@@ -125,6 +129,13 @@ function openNext() {
   } else {
     tl.reverse();
   }
+}
+
+function pushTo(to) {
+  toggle();
+  setTimeout(() => {
+    router.push({ path: to });
+  }, 2400);
 }
 
 watch(open, () => {

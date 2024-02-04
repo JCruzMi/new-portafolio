@@ -12,19 +12,20 @@ import Index from "~/components/main/Index.vue";
 import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 
+useHead({
+  title: "Huan - Home",
+  meta: [
+    {
+      name: "description",
+      content: "My portfolio in Nuxt js by Huan whit love",
+    },
+  ],
+});
 const open = useOpen();
-
 provide("openMenu", open);
 </script>
 
 <style>
-.gradient-border {
-  position: relative;
-  border-radius: 0.5rem;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  width: 100%;
-}
 @media (prefers-color-scheme: light) {
   .gradient-border::before {
     background: linear-gradient(

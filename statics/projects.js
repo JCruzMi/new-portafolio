@@ -20,6 +20,7 @@ const projects = [
     name: "HKanime",
     description: "Web para visualizar animes",
     image: "images/portfolio/hkanime.webp",
+    imageProject: "images/portfolio/hkanime.webp",
     github: "https://github.com/JCruzMi/hkanime",
     link: "https://hkanime.vercel.app",
     tags: [
@@ -32,6 +33,7 @@ const projects = [
     name: "Luma",
     description: "Wep para guardar y compartir todas tus redes",
     image: "images/portfolio/luma.webp",
+    imageProject: "images/portfolio/luma-project.webp",
     link: "https://luma-huan.vercel.app/",
     github: "https://github.com/JCruzMi/ShareProfile",
     tags: [
@@ -44,6 +46,7 @@ const projects = [
     name: "Inkoms",
     description: "Marketplace de Inversiones",
     image: "images/portfolio/inkoms.webp",
+    imageProject: "images/portfolio/inkoms-project.webp",
     link: "https://www.inkoms.com",
     // github: "https://github.com/JCruzMi/ShareProfile",
     tags: ["cib:next-js", "devicon:tailwindcss", "devicon:typescript"],
