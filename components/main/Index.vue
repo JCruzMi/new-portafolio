@@ -156,7 +156,7 @@
                 />
               </div>
               <div class="text-6xl font-bold">
-                <Numbers :maxValue="10" />
+                <Numbers :maxValue="4" />
               </div>
               proyectos
             </div>

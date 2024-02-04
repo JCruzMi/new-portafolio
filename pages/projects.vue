@@ -4,7 +4,9 @@
     class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4 font-primary"
   >
     <section class="w-full flex flex-col md:grid md:grid-cols-2 relative gap-3">
-      <header class="flex w-full justify-between col-span-2 items-center gap-3">
+      <header
+        class="box flex w-full justify-between col-span-2 items-center gap-3"
+      >
         <Card
           class="min-h-[60px] max-h-[60px] flex justify-center items-center"
         >
@@ -19,17 +21,19 @@
       </header>
       <template v-for="project in projectList" :key="project.name">
         <div class="box">
-          <Card>
-            <div
-              class="text-lg font-semibold flex w-full justify-between text-white"
-            >
-              <h3>{{ project.name }}</h3>
-              <a :href="project.link" target="_blank">
-                <Icon
-                  icon="material-symbols-light:arrow-circle-right-outline-rounded"
-                  class="w-10 h-10 text-white hover:text-success transition-all duration-300"
-                />
-              </a>
+          <Card class="overflow-hidden">
+            <div class="overflow-hidden h-[40px]">
+              <div
+                class="text-lg font-semibold flex w-full justify-between text-white"
+              >
+                <h3 class="">{{ project.name }}</h3>
+                <a :href="project.link" target="_blank">
+                  <Icon
+                    icon="material-symbols-light:arrow-circle-right-outline-rounded"
+                    class="w-10 h-10 text-white hover:text-success transition-all duration-300"
+                  />
+                </a>
+              </div>
             </div>
             <p class="text-white">
               {{ project.description }}
@@ -42,7 +46,7 @@
             <img
               :src="project.imageProject"
               :alt="project.name"
-              class="rounded-lg h-full w-full object-cover bg-no-repeat bg-center bg-cover aspect-video"
+              class="image rounded-lg h-full w-full object-cover bg-no-repeat bg-center bg-cover aspect-video"
             />
           </Card>
         </div>
@@ -75,6 +79,7 @@ provide("openMenu", open);
 
 const { projectList } = useProjects();
 let tl;
+let tlImg;
 onMounted(() => {
   tl = gsap.timeline({
     delayed: 0,
@@ -93,8 +98,24 @@ onMounted(() => {
     ease: "power2.inOut",
     stagger: 0.25,
   });
-
   tl.play();
+});
+
+onMounted(() => {
+  tlImg = gsap.timeline({
+    delayed: 0,
+    paused: true,
+    reversed: true,
+  });
+  tlImg.from(".image", {
+    duration: 0.5,
+    opacity: 1,
+    y: 500,
+    delay: 0.25,
+    ease: "power2.inOut",
+    stagger: 0.25,
+  });
+  tlImg.play();
 });
 </script>
 
