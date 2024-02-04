@@ -3,12 +3,16 @@
   <main
     class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4 font-primary"
   >
-    <section class="w-full flex flex-col md:grid md:grid-cols-2 relative gap-8">
-      <header class="flex w-full justify-between col-span-2 items-center">
-        <h1 class="text-2xl font-bold text-white">Proyectos</h1>
+    <section class="w-full flex flex-col md:grid md:grid-cols-2 relative gap-3">
+      <header class="flex w-full justify-between col-span-2 items-center gap-3">
+        <Card
+          class="min-h-[60px] max-h-[60px] flex justify-center items-center"
+        >
+          <h1 class="text-xl font-bold text-white text-center">Proyectos</h1>
+        </Card>
         <div
           @click="open.toggle"
-          class="max-w-[60px] borderBox min-w-[60px] min-h-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+          class="z-10 max-w-[60px] borderBox min-w-[60px] min-h-[60px] max-h-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
         >
           <Icon icon="ph:list-bold" class="w-8 h-8" />
         </div>
@@ -30,7 +34,7 @@
             <p class="text-white">
               {{ project.description }}
             </p>
-            <div class="flex flex-row gap-4 py-2">
+            <div class="flex flex-row gap-3 py-2">
               <template v-for="tag in project.tags" :key="tag + project.name">
                 <Tags :icon="tag" />
               </template>
@@ -44,6 +48,7 @@
         </div>
       </template>
     </section>
+    <ButtonToggleMenu />
   </main>
 </template>
 
@@ -54,6 +59,7 @@ import Tags from "~/components/ui/Tags.vue";
 import { Icon } from "@iconify/vue";
 import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
+import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
 useHead({
   title: "Huan - Projects",

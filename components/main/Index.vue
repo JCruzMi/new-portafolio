@@ -89,11 +89,13 @@
               <p class="uppercase cursor-default">Proyectos</p>
             </div>
             <Swiper />
-            <div
-              class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+            <NuxtLink to="/projects">
+              <div
+                class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+              >
+                Ver todo
+              </div></NuxtLink
             >
-              Ver todo
-            </div>
           </div>
         </div>
       </div>

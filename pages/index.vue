@@ -1,13 +1,15 @@
 <template>
   <Menu />
   <main
-    class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4 font-primary"
+    class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4 font-primary relative"
   >
     <Index />
+    <ButtonToggleMenu />
   </main>
 </template>
 
 <script setup>
+import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 import Index from "~/components/main/Index.vue";
 import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
