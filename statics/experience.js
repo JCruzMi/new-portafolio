@@ -11,7 +11,7 @@ const experience = [
     time: "Octubre 2022 - Febrero 2024",
     description: [
       "Asumí el papel de líder en el desarrollo front-end",
-      "Realicé la integración de la aplicación Android",
+      "Facilité la creación y publicación de la aplicación para Android",
     ],
     link: "https://www.inkoms.com",
     role: "Desarrollador Front-end",

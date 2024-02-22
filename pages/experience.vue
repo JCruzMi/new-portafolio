@@ -51,10 +51,10 @@
       </template>
       <div class="box col-span-2 text-white">
         <Card class="overflow-hidden h-auto !min-h-0">
-          <h2 class="font-bold">En Busqueda de más experiencia</h2>
+          <h2 class="font-bold">En Búsqueda de más experiencia</h2>
 
           <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
-            Actualemente me encuentro en busqueda de nuevas oportunidades
+            Actualmente me encuentro en búsqueda de nuevas oportunidades
             laborales.
           </p>
 
