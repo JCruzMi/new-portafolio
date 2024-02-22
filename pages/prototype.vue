@@ -175,9 +175,11 @@
               />
             </svg>
             <div class="flex gap-6" ref="nav">
-              <p class="cursor-pointer">
-                {{ languageSelect.header.home }}
-              </p>
+              <NuxtLink to="/">
+                <p class="cursor-pointer">
+                  {{ languageSelect.header.home }}
+                </p></NuxtLink
+              >
               <p class="cursor-pointer">
                 {{ languageSelect.header.sponsor }}
               </p>

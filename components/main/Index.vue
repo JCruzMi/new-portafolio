@@ -23,14 +23,6 @@
             </h1>
           </div></Zcard
         >
-        <div
-          class="arrow borderBox justify-center items-center hidden max-w-[80px] min-h-[208px] cursor-pointer w-0 h-full box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300"
-        >
-          <Icon
-            icon="material-symbols:arrow-forward-ios"
-            class="w-10 h-10 text-white"
-          />
-        </div>
       </div>
       <div
         class="box p-4 borderBox bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface transition-colors duration-300 rounded-xl flex flex-col gap-2 h-full justify-start justify-self-start relative w-full overflow-hidden"
@@ -66,7 +58,7 @@
       >
         <div class="flex flex-col gap-3 relative w-full h-full">
           <div
-            class="download flex w-full font-semibold text-white h-0 flex-row gap-3"
+            class="flex w-full font-semibold text-white min-h-[60px] h-[60px] max-h-[60px] flex-row gap-3"
           >
             <div
               class="flex text-center borderBox w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
@@ -77,7 +69,7 @@
             </div>
             <div
               @click="toggle"
-              class="max-w-[60px] borderBox min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="max-w-[60px] borderBox max-h-[60px] min-w-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
               <Icon icon="ph:list-bold" class="w-8 h-8" />
             </div>
@@ -110,11 +102,13 @@
           <p class="uppercase cursor-default">Experiencia</p>
         </div>
         <SwiperExp />
-        <div
-          class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
-        >
-          Ver todo
-        </div>
+        <NuxtLink to="/experience">
+          <div
+            class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+          >
+            Ver todo
+          </div>
+        </NuxtLink>
       </div>
       <div
         class="md:order-3 borderBox flex-col order-3 col-span-1 bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex p-4"
@@ -142,9 +136,9 @@
         </div>
       </div>
       <div
-        class="md:order-2 col-span-1 lg:col-span-2 lg:order-3 order-2 bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-10"
+        class="md:order-2 col-span-1 lg:col-span-2 lg:order-3 order-2 bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-4 md:p-10"
       >
-        <div class="flex gap-2 text-white flex-col cursor-default">
+        <div class="flex gap-2 text-white flex-col cursor-default w-full">
           <div class="flex flex-row justify-start gap-1 w-auto text-2xl">
             <div
               class="w-auto flex-col text-2xl font-normal gap-4 flex justify-start items-start"
@@ -156,7 +150,7 @@
                 />
               </div>
               <div class="text-6xl font-bold">
-                <Numbers :maxValue="4" />
+                <Numbers :maxValue="3" />
               </div>
               proyectos
             </div>
@@ -215,26 +209,6 @@ onMounted(() => {
     x: 0,
     opacity: 1,
     delay: 0.5,
-    ease: "power2.inOut",
-  });
-
-  gsap.to(".arrow", {
-    duration: 0.5,
-    delay: 0.5,
-    display: "flex",
-    opacity: 1,
-    width: "60px",
-    minWidth: "60px",
-    ease: "power2.inOut",
-  });
-
-  gsap.to(".download", {
-    duration: 0.5,
-    delay: 0.5,
-    display: "flex",
-    opacity: 1,
-    height: "60px",
-    minHeight: "60px",
     ease: "power2.inOut",
   });
 });

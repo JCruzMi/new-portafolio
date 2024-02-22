@@ -8,7 +8,7 @@ const experience = [
   },
   {
     name: "Inkoms",
-    time: "Octubre 2022 - Actualmente",
+    time: "Octubre 2022 - Febrero 2024",
     description: [
       "Asumí el papel de líder en el desarrollo front-end",
       "Realicé la integración de la aplicación Android",

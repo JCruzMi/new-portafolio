@@ -21,7 +21,7 @@ function increaseCount() {
 watch(data, (newValue, oldValue) => {
   gsap.to(data, {
     duration: 0.5,
-    delay: 2,
+    delay: 1,
     maxNum: newValue.num,
     ease: "none",
   });

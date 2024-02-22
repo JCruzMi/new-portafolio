@@ -33,17 +33,6 @@
         </div>
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
-            class="textShow overflow-hidden group-hover:text-white transition-colors"
-            @click="pushTo('/about')"
-          >
-            Sobre mi
-          </p>
-          <div
-            class="line absolute w-full h-[2px] bottom-0 left-0 bg-white/50 group-hover:bg-white transition-colors"
-          ></div>
-        </div>
-        <div class="flex w-full relative pb-6 cursor-pointer group">
-          <p
             class="textShow translate-x-0 overflow-hidden group-hover:text-white transition-colors"
             @click="pushTo('/projects')"
           >
@@ -55,9 +44,10 @@
         </div>
         <div class="flex w-full relative pb-6 cursor-pointer group">
           <p
+            @click="pushTo('/experience')"
             class="textShow overflow-hidden group-hover:text-white transition-colors"
           >
-            Contacto
+            Experiencia
           </p>
           <div
             class="line absolute w-full h-[2px] bottom-0 left-0 bg-white/50 group-hover:bg-white transition-colors"

@@ -16,7 +16,7 @@
           @click="open.toggle"
           class="z-10 max-w-[60px] borderBox min-w-[60px] min-h-[60px] max-h-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
         >
-          <Icon icon="ph:list-bold" class="w-8 h-8" />
+          <Icon icon="ph:list-bold" class="w-8 h-8 text-white" />
         </div>
       </header>
       <template v-for="project in projectList" :key="project.name">
@@ -51,6 +51,13 @@
           </Card>
         </div>
       </template>
+      <div class="box">
+        <NuxtLink to="/prototype">
+          <Card class="overflow-hidden min-h-0">
+            Cool animation
+          </Card></NuxtLink
+        >
+      </div>
     </section>
     <ButtonToggleMenu />
   </main>
@@ -66,11 +73,12 @@ import { useOpen } from "~/composables/useMenu";
 import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
 useHead({
-  title: "Huan - Projects",
+  title: "Huan - Proyectos",
   meta: [
     {
-      name: "description",
-      content: "Projects made by Juan David Cruz",
+      name: "Proyectos",
+      content:
+        "Proyectos en los que participe o que hice con fines más que educativos",
     },
   ],
 });
@@ -78,8 +86,8 @@ const open = useOpen();
 provide("openMenu", open);
 
 const { projectList } = useProjects();
+
 let tl;
-let tlImg;
 onMounted(() => {
   tl = gsap.timeline({
     delayed: 0,
@@ -101,21 +109,8 @@ onMounted(() => {
   tl.play();
 });
 
-onMounted(() => {
-  tlImg = gsap.timeline({
-    delayed: 0,
-    paused: true,
-    reversed: true,
-  });
-  tlImg.from(".image", {
-    duration: 0.5,
-    opacity: 1,
-    y: 500,
-    delay: 0.25,
-    ease: "power2.inOut",
-    stagger: 0.25,
-  });
-  tlImg.play();
+onUnmounted(() => {
+  tl.revert();
 });
 </script>
 
