@@ -53,7 +53,7 @@
       </template>
       <div class="box">
         <NuxtLink to="/prototype">
-          <Card class="overflow-hidden min-h-0">
+          <Card class="overflow-hidden !min-h-0">
             Cool animation
           </Card></NuxtLink
         >

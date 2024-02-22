@@ -21,7 +21,7 @@
       </header>
       <template v-for="experience in experienceList" :key="experience">
         <div class="box col-span-2 text-white">
-          <Card class="overflow-hidden h-auto min-h-0 w-full">
+          <Card class="overflow-hidden h-auto !min-h-0 w-full">
             <h2 class="font-bold w-full flex justify-between">
               {{ experience.name }}
               <a target="_blank" :href="experience.link">
@@ -50,7 +50,7 @@
         </div>
       </template>
       <div class="box col-span-2 text-white">
-        <Card class="overflow-hidden h-auto min-h-0">
+        <Card class="overflow-hidden h-auto !min-h-0">
           <h2 class="font-bold">En Busqueda de más experiencia</h2>
 
           <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
