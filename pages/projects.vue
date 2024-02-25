@@ -55,13 +55,42 @@
           </Card>
         </div>
       </template>
-      <div class="box">
-        <NuxtLink to="/prototype" ariaCurrentValue="prototipos">
-          <Card class="overflow-hidden !min-h-0">
-            Cool animation
-          </Card></NuxtLink
-        >
-      </div>
+      <template v-for="project in othersList" :key="project.name">
+        <div class="box">
+          <Card class="overflow-hidden">
+            <div class="overflow-hidden h-[40px]">
+              <div
+                class="text-lg font-semibold flex w-full justify-between text-white"
+              >
+                <h3 class="">{{ project.name }}</h3>
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  :aria-label="project.name"
+                >
+                  <Icon
+                    icon="material-symbols-light:arrow-circle-right-outline-rounded"
+                    class="w-10 h-10 text-white hover:text-success transition-all duration-300"
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="text-white">
+              {{ project.description }}
+            </p>
+            <div class="flex flex-row gap-3 py-2">
+              <template v-for="tag in project.tags" :key="tag + project.name">
+                <Tags :icon="tag" />
+              </template>
+            </div>
+            <img
+              :src="project.imageProject"
+              :alt="project.name"
+              class="image rounded-lg h-full w-full object-cover bg-no-repeat bg-center bg-cover aspect-video"
+            />
+          </Card>
+        </div>
+      </template>
     </section>
     <ButtonToggleMenu />
   </main>
@@ -89,7 +118,7 @@ useHead({
 const open = useOpen();
 provide("openMenu", open);
 
-const { projectList } = useProjects();
+const { projectList, othersList } = useProjects();
 
 let tl;
 onMounted(() => {

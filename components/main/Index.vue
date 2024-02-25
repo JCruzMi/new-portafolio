@@ -16,10 +16,10 @@
               class="h-full w-full absolute left-0 top-0 right-0 bottom-0 bg-black/40 z-0"
             ></div>
             <h1
-              class="inside text-3xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
+              class="inside text-3xl sm:text-4xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
             >
               Juan David Cruz
-              <p class="text-2xl text-white/90">Frontend Developer</p>
+              <p class="text-xl md:text-2xl text-success">Frontend Developer</p>
             </h1>
           </div></Zcard
         >
