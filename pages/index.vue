@@ -15,12 +15,12 @@ import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 
 useHead({
-  title: "Huan | Desarrollador Web responsive",
+  title: "Huan | Desarrollador Web Responsive",
   meta: [
     {
       name: "description",
       content:
-        "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
+        "Soy Juan desarrollador frontend, manejo diseño responsivo y optimización de rendimiento web.",
     },
   ],
 });
