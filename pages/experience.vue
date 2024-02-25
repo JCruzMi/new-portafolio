@@ -43,7 +43,7 @@
               v-for="description in experience.description"
               :key="description"
             >
-              <p class="mt-0 max-w-screen-sm text-sm text-gray-500">
+              <p class="mt-0 max-w-screen-sm text-sm text-white/80">
                 {{ description }}.
               </p>
             </template>
@@ -104,7 +104,7 @@ useHead({
   title: "Huan | Experiencia",
   meta: [
     {
-      name: "Experiencia",
+      name: "description",
       content: "Toda mi experiencia laboral en una vista",
     },
   ],

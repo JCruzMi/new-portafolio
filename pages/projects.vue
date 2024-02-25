@@ -39,7 +39,7 @@
                 </a>
               </div>
             </div>
-            <p class="text-white">
+            <p class="text-white/80">
               {{ project.description }}
             </p>
             <div class="flex flex-row gap-3 py-2">
@@ -75,7 +75,7 @@
                 </a>
               </div>
             </div>
-            <p class="text-white">
+            <p class="text-white/80">
               {{ project.description }}
             </p>
             <div class="flex flex-row gap-3 py-2">
@@ -120,7 +120,7 @@ useHead({
   title: "Huan | Proyectos",
   meta: [
     {
-      name: "Proyectos",
+      name: "description",
       content:
         "Proyectos en los que participe o que he realizado con fines más que educativos.",
     },
