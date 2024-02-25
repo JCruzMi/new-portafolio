@@ -6,7 +6,7 @@
       class="mx-auto max-w-7xl w-full h-full flex flex-col gap-3 justify-end items-end lg:p-8 md:p-8 p-4 overflow-hidden"
     >
       <div class="flex w-full justify-between items-center">
-        <h1 class="text-3xl font-bold textName">Juan David Cruz</h1>
+        <h2 class="text-3xl font-bold textName">Juan David Cruz</h2>
         <button
           @click="openNext"
           class="rounded-full p-2 bg-surface buttonClose"

@@ -19,7 +19,9 @@
               class="inside text-3xl sm:text-4xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
             >
               Juan David Cruz
-              <p class="text-xl md:text-2xl text-success">Frontend Developer</p>
+              <h2 class="text-xl md:text-2xl text-success">
+                Frontend Developer
+              </h2>
             </h1>
           </div></Zcard
         >
@@ -83,7 +85,7 @@
             class="flex borderBox flex-col w-full h-full hover:bg-surface transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
           >
             <div class="pb-2 flex gap-4 items-center w-full">
-              <p class="uppercase cursor-default">Proyectos</p>
+              <h2 class="uppercase cursor-default">Proyectos</h2>
             </div>
             <Swiper />
             <NuxtLink to="/projects" ariaCurrentValue="ver todos los proyectos">
@@ -104,7 +106,7 @@
         class="bg-surface borderBox flex-col order-1 col-span-2 justify-between lg:col-span-3 min-h-[208px] w-full rounded-xl flex p-4"
       >
         <div class="pb-2 flex gap-4 items-center w-full">
-          <p class="uppercase cursor-default">Experiencia</p>
+          <h2 class="uppercase cursor-default">Experiencia</h2>
         </div>
         <SwiperExp />
         <NuxtLink to="/experience" ariaCurrentValue="ver toda la experiencia">

@@ -13,14 +13,16 @@ useHead({
 });
 
 useSeoMeta({
-  ogTitle: "Huan",
-  ogDescription: "Mi portafolio web con Nuxt js",
+  ogTitle: "Huan | Desarrollador Web responsive",
+  ogDescription:
+    "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
   ogImage: "/images/portfolio/screen.webp",
   ogUrl: "huan.dev",
-  twitterTitle: "Huan",
-  twitterDescription: "Mi portafolio web con Nuxt js",
+  twitterTitle: "Huan | Desarrollador Web responsive",
+  twitterDescription:
+    "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
   twitterImage: "/images/portfolio/screen.webp",
-  twitterCard: "summary",
+  twitterCard: "Hi",
 });
 </script>
 

@@ -15,11 +15,12 @@ import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 
 useHead({
-  title: "Huan - Home",
+  title: "Huan | Desarrollador Web responsive",
   meta: [
     {
       name: "description",
-      content: "Mi portafolio web con Nuxt js",
+      content:
+        "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
     },
   ],
 });

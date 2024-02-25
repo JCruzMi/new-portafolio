@@ -91,7 +91,7 @@ import { useOpen } from "~/composables/useMenu";
 import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
 useHead({
-  title: "Huan - Experiencia",
+  title: "Huan | Experiencia",
   meta: [
     {
       name: "Experiencia",

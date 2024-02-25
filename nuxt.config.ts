@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/google-fonts",
     "@vueuse/nuxt",
+    "@nuxtjs/robots",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
