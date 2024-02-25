@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+useHead({
+  htmlAttrs: {
+    lang: "es",
+  },
+});
+</script>
 
 <template>
   <NuxtPage />

@@ -175,7 +175,7 @@
               />
             </svg>
             <div class="flex gap-6" ref="nav">
-              <NuxtLink to="/">
+              <NuxtLink to="/" ariaCurrentValue="home">
                 <p class="cursor-pointer">
                   {{ languageSelect.header.home }}
                 </p></NuxtLink

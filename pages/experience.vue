@@ -24,7 +24,11 @@
           <Card class="overflow-hidden h-auto !min-h-0 w-full">
             <h2 class="font-bold w-full flex justify-between">
               {{ experience.name }}
-              <a target="_blank" :href="experience.link">
+              <a
+                target="_blank"
+                :href="experience.link"
+                :aria-label="experience.name"
+              >
                 <Icon
                   icon="material-symbols-light:arrow-circle-right-outline-rounded"
                   class="w-10 h-10 text-white hover:text-success transition-all duration-300"
@@ -66,6 +70,7 @@
               href="mailto:juan.murato.cruz@gmail.com"
               target="_blank"
               rel="noopener"
+              aria-label="correo"
             >
               <p>juan.murato.cruz@gmail.com</p>
             </a>
@@ -80,7 +85,6 @@
 <script setup>
 import gsap from "gsap";
 import Card from "~/components/ui/Card.vue";
-import Tags from "~/components/ui/Tags.vue";
 import { Icon } from "@iconify/vue";
 import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";

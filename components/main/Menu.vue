@@ -10,6 +10,7 @@
         <button
           @click="openNext"
           class="rounded-full p-2 bg-surface buttonClose"
+          aria-label="menu"
         >
           <Icon
             icon="material-symbols:close-small-outline-rounded"

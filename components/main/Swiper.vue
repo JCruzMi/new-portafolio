@@ -31,7 +31,11 @@
           >
             <p class="font-semibold flex gap-2 text-xl items-center my-2">
               {{ project.name }}
-              <a :href="project.link" target="_blank">
+              <a
+                :href="project.link"
+                target="_blank"
+                :aria-label="project.name"
+              >
                 <Icon
                   icon="material-symbols-light:arrow-circle-right-outline-rounded"
                   class="w-10 h-10 text-white hover:text-success transition-all duration-300"

@@ -28,7 +28,11 @@
                 experience.time
               }}</span>
             </p>
-            <a target="_blank" :href="experience.link">
+            <a
+              target="_blank"
+              :href="experience.link"
+              :aria-label="experience.name"
+            >
               <Icon
                 icon="material-symbols-light:arrow-circle-right-outline-rounded"
                 class="w-10 h-10 text-white hover:text-success transition-all duration-300"

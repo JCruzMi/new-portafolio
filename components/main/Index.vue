@@ -48,6 +48,7 @@
             href="mailto:juan.murato.cruz@gmail.com"
             target="_blank"
             rel="noopener"
+            aria-label="correo"
           >
             <p>juan.murato.cruz@gmail.com</p>
           </a>
@@ -63,7 +64,11 @@
             <div
               class="flex text-center borderBox w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
             >
-              <a target="_blank" href="./docs/CV_Juan.pdf" class="w-full"
+              <a
+                target="_blank"
+                href="./docs/CV_Juan.pdf"
+                class="w-full"
+                aria-label="CV"
                 >Descargar CV</a
               >
             </div>
@@ -81,7 +86,7 @@
               <p class="uppercase cursor-default">Proyectos</p>
             </div>
             <Swiper />
-            <NuxtLink to="/projects">
+            <NuxtLink to="/projects" ariaCurrentValue="ver todos los proyectos">
               <div
                 class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
               >
@@ -102,7 +107,7 @@
           <p class="uppercase cursor-default">Experiencia</p>
         </div>
         <SwiperExp />
-        <NuxtLink to="/experience">
+        <NuxtLink to="/experience" ariaCurrentValue="ver toda la experiencia">
           <div
             class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
           >
@@ -123,6 +128,7 @@
             href="https://www.linkedin.com/in/juan-david-cruz-huan/"
             target="_blank"
             class="p-2 borderBox hover:border-success rounded-lg"
+            aria-label="Linkedin"
           >
             <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
           </a>
@@ -130,6 +136,7 @@
             href="https://github.com/JCruzMi"
             target="_blank"
             class="p-2 borderBox hover:border-success rounded-lg"
+            aria-label="Github"
           >
             <Icon icon="mdi:github" class="w-16 h-16 text-white" />
           </a>

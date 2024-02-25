@@ -27,7 +27,11 @@
                 class="text-lg font-semibold flex w-full justify-between text-white"
               >
                 <h3 class="">{{ project.name }}</h3>
-                <a :href="project.link" target="_blank">
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  :aria-label="project.name"
+                >
                   <Icon
                     icon="material-symbols-light:arrow-circle-right-outline-rounded"
                     class="w-10 h-10 text-white hover:text-success transition-all duration-300"
@@ -52,7 +56,7 @@
         </div>
       </template>
       <div class="box">
-        <NuxtLink to="/prototype">
+        <NuxtLink to="/prototype" ariaCurrentValue="prototipos">
           <Card class="overflow-hidden !min-h-0">
             Cool animation
           </Card></NuxtLink
