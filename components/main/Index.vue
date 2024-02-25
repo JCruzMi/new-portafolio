@@ -19,9 +19,7 @@
               class="inside text-3xl sm:text-4xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
             >
               Juan David Cruz
-              <h2 class="text-xl md:text-2xl text-success">
-                Frontend Developer
-              </h2>
+              <p class="text-xl md:text-2xl text-success">Frontend Developer</p>
             </h1>
           </div></Zcard
         >
