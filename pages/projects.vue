@@ -26,7 +26,7 @@
               <div
                 class="text-lg font-semibold flex w-full justify-between text-white"
               >
-                <h3 class="">{{ project.name }}</h3>
+                <h2 class="">{{ project.name }}</h2>
                 <a
                   :href="project.link"
                   target="_blank"
@@ -62,7 +62,7 @@
               <div
                 class="text-lg font-semibold flex w-full justify-between text-white"
               >
-                <h3 class="">{{ project.name }}</h3>
+                <h2 class="">{{ project.name }}</h2>
                 <a
                   :href="project.link"
                   target="_blank"
@@ -108,11 +108,11 @@ import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 useSeoMeta({
   ogTitle: "Huan | Proyectos",
   ogDescription:
-    "Proyectos en los que participe o que he realizado con fines más que educativos.",
+    "Proyectos en los que participé o que he realizado con fines más que educativos.",
   ogImage: "/images/portfolio/screen.webp",
   twitterTitle: "Huan | Proyectos",
   twitterDescription:
-    "Proyectos en los que participe o que he realizado con fines más que educativos.",
+    "Proyectos en los que participé o que he realizado con fines más que educativos.",
   twitterImage: "/images/portfolio/screen.webp",
 });
 
