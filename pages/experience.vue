@@ -90,6 +90,15 @@ import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
+useSeoMeta({
+  ogTitle: "Huan | Experiencia",
+  ogDescription: "Descubre donde he trabajado rapidam y ordenamente.",
+  ogImage: "/images/portfolio/screen.webp",
+  twitterTitle: "Huan | Experiencia",
+  twitterDescription: "Descubre donde he trabajado rapidam y ordenamente.",
+  twitterImage: "/images/portfolio/screen.webp",
+});
+
 useHead({
   title: "Huan | Experiencia",
   meta: [
