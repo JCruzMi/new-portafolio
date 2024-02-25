@@ -13,12 +13,12 @@ useHead({
 });
 
 useSeoMeta({
-  ogTitle: "Huan | Desarrollador Web responsive",
+  ogTitle: "Huan | Desarrollador Web Responsive",
   ogDescription:
     "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
   ogImage: "/images/portfolio/screen.webp",
   ogUrl: "huan.dev",
-  twitterTitle: "Huan | Desarrollador Web responsive",
+  twitterTitle: "Huan | Desarrollador Web Responsive",
   twitterDescription:
     "Soy Juan desarrollador Frontend, manejo diseño responsivo y optimización de rendimiento web.",
   twitterImage: "/images/portfolio/screen.webp",
