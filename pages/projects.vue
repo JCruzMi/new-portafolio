@@ -105,13 +105,24 @@ import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
+useSeoMeta({
+  ogTitle: "Huan | Proyectos",
+  ogDescription:
+    "Proyectos en los que participe o que he realizado con fines más que educativos.",
+  ogImage: "/images/portfolio/screen.webp",
+  twitterTitle: "Huan | Proyectos",
+  twitterDescription:
+    "Proyectos en los que participe o que he realizado con fines más que educativos.",
+  twitterImage: "/images/portfolio/screen.webp",
+});
+
 useHead({
   title: "Huan | Proyectos",
   meta: [
     {
       name: "Proyectos",
       content:
-        "Proyectos en los que participe o que hice con fines más que educativos",
+        "Proyectos en los que participe o que he realizado con fines más que educativos.",
     },
   ],
 });
