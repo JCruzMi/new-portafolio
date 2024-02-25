@@ -57,7 +57,7 @@
         <Card class="overflow-hidden h-auto !min-h-0">
           <h2 class="font-bold">En Búsqueda de más experiencia</h2>
 
-          <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
+          <p class="mt-2 max-w-screen-sm text-sm text-white/80">
             Actualmente me encuentro en búsqueda de nuevas oportunidades
             laborales.
           </p>
