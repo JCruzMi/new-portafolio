@@ -92,11 +92,11 @@ import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
 
 useSeoMeta({
   ogTitle: "Huan | Experiencia",
-  ogDescription: "Descubre donde he trabajado de forma rapida y ordenamente.",
+  ogDescription: "Descubre dónde he trabajado de forma rápida y ordenadamente.",
   ogImage: "/images/portfolio/screen.webp",
   twitterTitle: "Huan | Experiencia",
   twitterDescription:
-    "Descubre donde he trabajado de forma rapida y ordenamente.",
+    "Descubre dónde he trabajado de forma rápida y ordenadamente.",
   twitterImage: "/images/portfolio/screen.webp",
 });
 
