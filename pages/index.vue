@@ -15,7 +15,7 @@ import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 
 useHead({
-  title: "Huan | Desarrollador Web Responsive",
+  title: "Huan | Desarrollador Web Responsivo",
   meta: [
     {
       name: "description",
