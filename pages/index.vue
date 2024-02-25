@@ -19,7 +19,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "My portfolio in Nuxt js by Huan whit love",
+      content: "Mi portafolio web con Nuxt js",
     },
   ],
 });
