@@ -19,7 +19,7 @@ const others = [
   {
     name: "Animaciones con GSAP",
     description:
-      "Con el fin de aprender herramientas para animar, realicé las siguientes animaciones inspiradas en una publicación del usuario de instagram @uxui_howard.le y realizadas con Nuxt.js, TailwindothersList y GSAP.",
+      "Con el fin de aprender herramientas para animar, realicé las siguientes animaciones inspiradas en una publicación del usuario de instagram @uxui_howard.le y realizadas con Nuxt.js, Tailwind y GSAP.",
     image: "images/portfolio/hkanime.webp",
     imageProject: "images/portfolio/animations.webp",
     tags: ["devicon:vuejs", "devicon:tailwindcss"],
