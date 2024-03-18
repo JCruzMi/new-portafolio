@@ -697,7 +697,6 @@ onMounted(() => {
     delay: 0.2,
     webkitFilter: "blur(0px)",
   });
-
   gsap.from(footer.value, {
     opacity: 1,
     bottom: -100,
@@ -713,7 +712,6 @@ onMounted(() => {
     duration: 0.8,
     delay: 0.4,
   });
-
   gsap.from(circleOne.value, {
     opacity: 1,
     transform: "rotate(-160deg)",
