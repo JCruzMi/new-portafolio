@@ -17,13 +17,22 @@ devicon:figma
 
 const others = [
   {
-    name: "Animaciones con GSAP",
+    name: "Animaciones con GSAP | 1",
     description:
       "Con el fin de aprender herramientas para animar, realicé las siguientes animaciones inspiradas en una publicación del usuario de instagram @uxui_howard.le y realizadas con Nuxt.js, Tailwind y GSAP.",
-    image: "images/portfolio/hkanime.webp",
+    image: "images/portfolio/animations.webp",
     imageProject: "images/portfolio/animations.webp",
     tags: ["devicon:vuejs", "devicon:tailwindcss"],
-    link: "/prototype",
+    link: "/animations/uno",
+  },
+  {
+    name: "Animaciones con GSAP | 2",
+    description:
+      "Con el fin de aprender herramientas para animar, realicé las siguientes animaciones inspiradas en una publicación del usuario de instagram @uxui_howard.le y realizadas con Nuxt.js, Tailwind y GSAP.",
+    image: "images/portfolio/animations2.webp",
+    imageProject: "images/portfolio/animations2.webp",
+    tags: ["devicon:vuejs", "devicon:tailwindcss"],
+    link: "/animations/dos",
   },
 ];
 

@@ -43,7 +43,7 @@
               </a>
             </p>
             <div class="text-sm flex flex-row flex-wrap gap-2">
-              <template v-for="tags in project.tags" : :key="tags">
+              <template v-for="tags in project.tags" :key="tags">
                 <Tags :icon="tags" />
               </template>
             </div>

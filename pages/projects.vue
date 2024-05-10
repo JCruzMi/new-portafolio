@@ -19,6 +19,7 @@
           <Icon icon="ph:list-bold" class="w-8 h-8 text-white" />
         </div>
       </header>
+
       <template v-for="project in projectList" :key="project.name">
         <div class="box">
           <Card class="overflow-hidden">
@@ -55,42 +56,9 @@
           </Card>
         </div>
       </template>
-      <template v-for="project in othersList" :key="project.name">
-        <div class="box">
-          <Card class="overflow-hidden">
-            <div class="overflow-hidden h-[40px]">
-              <div
-                class="text-lg font-semibold flex w-full justify-between text-white"
-              >
-                <h2 class="">{{ project.name }}</h2>
-                <a
-                  :href="project.link"
-                  target="_blank"
-                  :aria-label="project.name"
-                >
-                  <Icon
-                    icon="material-symbols-light:arrow-circle-right-outline-rounded"
-                    class="w-10 h-10 text-white hover:text-success transition-all duration-300"
-                  />
-                </a>
-              </div>
-            </div>
-            <p class="text-white/80">
-              {{ project.description }}
-            </p>
-            <div class="flex flex-row gap-3 py-2">
-              <template v-for="tag in project.tags" :key="tag + project.name">
-                <Tags :icon="tag" />
-              </template>
-            </div>
-            <img
-              :src="project.imageProject"
-              :alt="project.name"
-              class="image rounded-lg h-full w-full object-cover bg-no-repeat bg-center bg-cover aspect-video"
-            />
-          </Card>
-        </div>
-      </template>
+      <div class="box">
+        <SwiperAnimations />
+      </div>
     </section>
     <ButtonToggleMenu />
   </main>
@@ -104,6 +72,7 @@ import { Icon } from "@iconify/vue";
 import Menu from "~/components/main/Menu.vue";
 import { useOpen } from "~/composables/useMenu";
 import ButtonToggleMenu from "~/components/main/ButtonToggleMenu.vue";
+import SwiperAnimations from "~/components/main/SwiperAnimations.vue";
 
 useSeoMeta({
   ogTitle: "Huan | Proyectos",
@@ -129,7 +98,7 @@ useHead({
 const open = useOpen();
 provide("openMenu", open);
 
-const { projectList, othersList } = useProjects();
+const { projectList } = useProjects();
 
 let tl;
 onMounted(() => {

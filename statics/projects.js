@@ -54,6 +54,19 @@ const projects = [
     // github: "https://github.com/JCruzMi/ShareProfile",
     tags: ["cib:next-js", "devicon:tailwindcss", "devicon:typescript"],
   },
+  {
+    name: "basic Trello clone",
+    description:
+      "Aplicación web para organizar tus listas de tareas al estilo de trello con la intención de aprender sobre drag and drop. Creada con Nuxt3, TailwindCSS y NextUi.",
+    image: "images/portfolio/trello.webp",
+    imageProject: "images/portfolio/trello-project.webp",
+    link: "https://basic-trello-clone.vercel.app",
+    github: "https://github.com/JCruzMi/trello-clone",
+    tags: ["devicon:nuxtjs", "devicon:tailwindcss", "devicon:typescript"],
+  },
 ];
+
+//https://squoosh.app/
+//https://shots.so/
 
 export default projects;

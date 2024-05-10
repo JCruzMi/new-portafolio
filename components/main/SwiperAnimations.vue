@@ -16,56 +16,58 @@
     }"
     :creative-effect="effects[1]"
   >
-    <template v-for="experience in experienceList" :key="experience.name">
-      <swiper-slide
-        class="w-full h-auto group text-white relative p-4 rounded-xl bg-background"
-      >
-        <div class="flex flex-col gap-2">
-          <div class="flex gap-2 w-full items-center justify-between">
-            <p class="font-semibold text-xl">
-              {{ experience.name }}
-              <span class="text-xs font-light text-white/90">{{
-                experience.time
-              }}</span>
-            </p>
-            <a
-              target="_blank"
-              :href="experience.link"
-              :aria-label="experience.name"
+    <template v-for="project in othersList" :key="project.name">
+      <swiper-slide class="w-full h-full group text-white relative rounded-xl">
+        <Card class="overflow-hidden">
+          <div class="overflow-hidden h-[40px]">
+            <div
+              class="text-lg font-semibold flex w-full justify-between text-white"
             >
-              <Icon
-                icon="material-symbols-light:arrow-circle-right-outline-rounded"
-                class="w-10 h-10 text-white hover:text-success transition-all duration-300"
-              />
-            </a>
+              <h2 class="">{{ project.name }}</h2>
+              <a
+                :href="project.link"
+                target="_blank"
+                :aria-label="project.name"
+              >
+                <Icon
+                  icon="material-symbols-light:arrow-circle-right-outline-rounded"
+                  class="w-10 h-10 text-white hover:text-success transition-all duration-300"
+                />
+              </a>
+            </div>
           </div>
-          <p>{{ experience.role }}</p>
-          <ul
-            v-for="description in experience.description"
-            :key="description"
-            class="list-disc list-inside text-sm"
-          >
-            <li>{{ description }}</li>
-          </ul>
-        </div>
+          <p class="text-white/80">
+            {{ project.description }}
+          </p>
+          <div class="flex flex-row gap-3 py-2">
+            <template v-for="tag in project.tags" :key="tag + project.name">
+              <Tags :icon="tag" />
+            </template>
+          </div>
+          <img
+            :src="project.imageProject"
+            :alt="project.name"
+            class="image rounded-lg h-full w-full object-cover bg-no-repeat bg-center bg-cover aspect-video"
+          />
+        </Card>
       </swiper-slide>
     </template>
   </swiper>
 </template>
 <script setup>
-import gsap from "gsap";
-
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Keyboard, EffectCreative, Pagination } from "swiper/modules";
+import { Autoplay, Keyboard, EffectCreative, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
 import "swiper/css/effect-creative";
 import { Icon } from "@iconify/vue";
-import { useExperience } from "~/composables/useExperience";
+import Tags from "~/components/ui/Tags.vue";
+import { useProjects } from "~/composables/useProjects";
+import Card from "../ui/Card.vue";
 
-const { experienceList } = useExperience();
+const { othersList } = useProjects();
 
-const modules = [Keyboard, EffectCreative, Pagination];
+const modules = [Keyboard, EffectCreative, Autoplay, Pagination];
 
 const effects = [
   {
@@ -134,21 +136,4 @@ const effects = [
     },
   },
 ];
-
-onMounted(() => {
-  gsap.set(".swiper", {
-    transformOrigin: "left",
-    scale: 1,
-    opacity: 1,
-    y: "300%",
-  });
-  gsap.to(".swiper", {
-    duration: 0.5,
-    scale: 1,
-    y: 0,
-    opacity: 1,
-    delay: 0.5,
-    ease: "power2.inOut",
-  });
-});
 </script>
