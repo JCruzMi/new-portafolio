@@ -1,6 +1,6 @@
 <template>
   <div
-    class="buttonToggleMenu lg:m-8 md:m-8 m-4 fixed bottom-0 right-0 borderBox max-w-[60px] min-w-[60px] max-h-[60px] min-h-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-full hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+    class="buttonToggleMenu lg:mx-10 md:m-8 m-4 fixed bottom-0 right-0 borderBox max-w-[60px] min-w-[60px] max-h-[60px] min-h-[60px] flex text-center w-full h-full transition-colors duration-300 rounded-full hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
     @click="scrollTop"
   >
     <Icon icon="solar:map-arrow-up-bold" class="w-8 h-8 text-white" />
