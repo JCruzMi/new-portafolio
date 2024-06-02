@@ -44,6 +44,17 @@
               {{ project.description }}
             </p>
             <div class="flex flex-row gap-3 py-2">
+              <NuxtLink
+                v-if="project.github"
+                :to="project.github"
+                target="_blank"
+                ariaCurrentValue="ver todos los proyectos"
+              >
+                <Icon
+                  icon="mdi:github"
+                  class="w-6 h-6 text-white cursor-pointer"
+                />
+              </NuxtLink>
               <template v-for="tag in project.tags" :key="tag + project.name">
                 <Tags :icon="tag" />
               </template>

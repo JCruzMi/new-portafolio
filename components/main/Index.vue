@@ -40,11 +40,14 @@
         class="box borderBox bg-surface min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start relative w-full overflow-hidden"
       >
         <div
-          class="w-full flex-col gap-4 text-white text-6xl flex justify-center items-center"
+          class="w-full flex-col gap-4 flex items-center p-3 h-full justify-between"
         >
-          <p class="h-full cursor-default">Hablemos</p>
+          <p class="uppercase h-auto cursor-default text-left w-full">
+            Contáctame
+          </p>
+          <p class="h-auto cursor-default text-white text-6xl">Hablemos</p>
           <a
-            class="btn bg-background text-white text-xl py-6 h-auto font-bold rounded-full hover:bg-background lowercase"
+            class="btn bg-background text-white sm:text-xl text-lg py-6 h-auto font-bold rounded-xl hover:bg-background lowercase w-full"
             href="mailto:juan.murato.cruz@gmail.com"
             target="_blank"
             rel="noopener"
@@ -88,7 +91,7 @@
             <Swiper />
             <NuxtLink to="/projects" ariaCurrentValue="ver todos los proyectos">
               <div
-                class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+                class="btn bg-background hover:bg-background rounded-xl text-white w-full mt-4"
               >
                 Ver todo
               </div></NuxtLink
@@ -109,7 +112,7 @@
         <SwiperExp />
         <NuxtLink to="/experience" ariaCurrentValue="ver toda la experiencia">
           <div
-            class="btn bg-background hover:bg-background rounded-full text-white w-full mt-4"
+            class="btn bg-background hover:bg-background rounded-xl text-white w-full mt-4"
           >
             Ver todo
           </div>
@@ -127,7 +130,7 @@
           <a
             href="https://www.linkedin.com/in/juan-david-cruz-huan/"
             target="_blank"
-            class="p-2 borderBox hover:border-success rounded-lg"
+            class="p-2 borderBox hover:border-success rounded-xl"
             aria-label="Linkedin"
           >
             <Icon icon="bx:bxl-linkedin" class="w-16 h-16 text-white" />
@@ -135,7 +138,7 @@
           <a
             href="https://github.com/JCruzMi"
             target="_blank"
-            class="p-2 borderBox hover:border-success rounded-lg"
+            class="p-2 borderBox hover:border-success rounded-xl"
             aria-label="Github"
           >
             <Icon icon="mdi:github" class="w-16 h-16 text-white" />

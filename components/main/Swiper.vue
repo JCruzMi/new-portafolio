@@ -8,7 +8,7 @@
     :centered-slides="true"
     :keyboard="{ enabled: true }"
     :autoplay="{
-      delay: 2500,
+      delay: 3500,
       pauseOnMouseEnter: true,
     }"
     :grab-cursor="true"
@@ -48,11 +48,20 @@
               </template>
             </div>
           </div>
-          <div
-            class="absolute right-4 -bottom-10 group-hover:bottom-4 transition-all"
+          <NuxtLink
+            :to="project.github"
+            target="_blank"
+            ariaCurrentValue="ver todos los proyectos"
           >
-            <Icon icon="mdi:github" class="w-6 h-6 text-white cursor-pointer" />
-          </div>
+            <div
+              class="absolute right-4 -bottom-10 group-hover:bottom-4 transition-all"
+            >
+              <Icon
+                icon="mdi:github"
+                class="w-6 h-6 text-white cursor-pointer"
+              />
+            </div>
+          </NuxtLink>
         </div>
       </swiper-slide>
     </template>
