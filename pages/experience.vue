@@ -4,12 +4,8 @@
     class="mx-auto max-w-7xl w-full flex justify-center items-start min-h-screen lg:p-8 md:p-8 p-4 font-primary"
   >
     <section class="w-full flex flex-col md:grid md:grid-cols-2 relative gap-3">
-      <header
-        class="box flex w-full justify-between col-span-2 items-center gap-3"
-      >
-        <Card
-          class="min-h-[60px] max-h-[60px] flex justify-center items-center"
-        >
+      <header class="box flex w-full justify-between col-span-2 items-center gap-3">
+        <Card class="min-h-[60px] max-h-[60px] flex justify-center items-center">
           <h1 class="text-xl font-bold text-white text-center">Experiencia</h1>
         </Card>
         <div
@@ -19,47 +15,12 @@
           <Icon icon="ph:list-bold" class="w-8 h-8 text-white" />
         </div>
       </header>
-      <template v-for="experience in experienceList" :key="experience">
-        <div class="box col-span-2 text-white">
-          <Card class="overflow-hidden h-auto !min-h-0 w-full">
-            <h2 class="font-bold w-full flex justify-between">
-              {{ experience.name }}
-              <a
-                target="_blank"
-                :href="experience.link"
-                :aria-label="experience.name"
-              >
-                <Icon
-                  icon="material-symbols-light:arrow-circle-right-outline-rounded"
-                  class="w-10 h-10 text-white hover:text-success transition-all duration-300"
-                />
-              </a>
-            </h2>
-            <h3 class="font-semibold w-full flex justify-between">
-              {{ experience.role }}
-            </h3>
-
-            <template
-              v-for="description in experience.description"
-              :key="description"
-            >
-              <p class="mt-0 max-w-screen-sm text-sm text-white/80">
-                {{ description }}.
-              </p>
-            </template>
-            <span class="mt-1 block text-sm font-semibold">{{
-              experience.time
-            }}</span>
-          </Card>
-        </div>
-      </template>
-      <div class="box col-span-2 text-white">
+      <!-- <div class="box col-span-2 text-white">
         <Card class="overflow-hidden h-auto !min-h-0">
           <h2 class="font-bold">En Búsqueda de más experiencia</h2>
 
           <p class="mt-2 max-w-screen-sm text-sm text-white/80">
-            Actualmente me encuentro en búsqueda de nuevas oportunidades
-            laborales.
+            Actualmente me encuentro en búsqueda de nuevas oportunidades laborales.
           </p>
 
           <div
@@ -76,7 +37,30 @@
             </a>
           </div>
         </Card>
-      </div>
+      </div> -->
+      <template v-for="experience in experienceList" :key="experience">
+        <div class="box col-span-2 text-white">
+          <Card class="overflow-hidden h-auto !min-h-0 w-full">
+            <h2 class="font-bold w-full flex justify-between">
+              {{ experience.name }}
+              <a target="_blank" :href="experience.link" :aria-label="experience.name">
+                <Icon
+                  icon="material-symbols-light:arrow-circle-right-outline-rounded"
+                  class="w-10 h-10 text-white hover:text-success transition-all duration-300"
+                />
+              </a>
+            </h2>
+            <h3 class="font-semibold w-full flex justify-between">
+              {{ experience.role }}
+            </h3>
+
+            <template v-for="description in experience.description" :key="description">
+              <p class="mt-0 max-w-screen-sm text-sm text-white/80">{{ description }}.</p>
+            </template>
+            <span class="mt-1 block text-sm font-semibold">{{ experience.time }}</span>
+          </Card>
+        </div>
+      </template>
     </section>
     <ButtonToggleMenu />
   </main>
@@ -95,8 +79,7 @@ useSeoMeta({
   ogDescription: "Descubre dónde he trabajado de forma rápida y ordenadamente.",
   ogImage: "/images/portfolio/screen.webp",
   twitterTitle: "Huan | Experiencia",
-  twitterDescription:
-    "Descubre dónde he trabajado de forma rápida y ordenadamente.",
+  twitterDescription: "Descubre dónde he trabajado de forma rápida y ordenadamente.",
   twitterImage: "/images/portfolio/screen.webp",
 });
 
