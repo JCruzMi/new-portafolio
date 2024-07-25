@@ -3,6 +3,8 @@ const experience = [
     name: "Slabcode",
     time: "Junio 2024 - Presente",
     description: ["Ingreso como middle software developer"],
+    link: "https://www.slabcode.com",
+    role: "Middle Software Developer",
   },
   {
     name: "Inkoms",
