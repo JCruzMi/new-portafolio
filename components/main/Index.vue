@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full flex items-center flex-none flex-col flex-nowrap justify-start h-min overflow-hidden relative gap-3 text-white/80"
+    class="relative flex flex-col items-center justify-start flex-none w-full gap-3 overflow-hidden flex-nowrap h-min text-white/80"
   >
     <div
       class="flex flex-col md:grid flex-none gap-3 grid-rows-[repeat(2,260px)] auto-rows-[260px] md:grid-cols-[repeat(2,minmax(200px,1fr))] lg:grid-cols-[repeat(3,minmax(200px,1fr))] overflow-hidden relative w-full h-min justify-center"
@@ -13,10 +13,10 @@
             class="cursor-default w-full bg-cover bg-center bg-no-repeat bg-[url('/images/portfolio/bgJp.webp')] h-full flex min-h-[208px] items-center justify-start relative box bg-surface overflow-hidden rounded-xl hover:bg-surface transition-colors duration-300 p-10"
           >
             <div
-              class="h-full w-full absolute left-0 top-0 right-0 bottom-0 bg-black/40 z-0"
+              class="absolute top-0 bottom-0 left-0 right-0 z-0 w-full h-full bg-black/40"
             ></div>
             <h1
-              class="inside text-3xl sm:text-4xl md:text-6xl font-bold text-text uppercase w-full text-center z-10"
+              class="z-10 w-full text-3xl font-bold text-center uppercase inside sm:text-4xl md:text-6xl text-text"
             >
               Juan David Cruz
               <p class="text-xl md:text-2xl text-success">Frontend Developer</p>
@@ -27,7 +27,7 @@
       <div
         class="box p-4 borderBox bg-surface min-h-[208px] items-end order-3 self-start hover:bg-surface transition-colors duration-300 rounded-xl flex flex-col gap-2 h-full justify-start justify-self-start relative w-full overflow-hidden"
       >
-        <div class="p-0 flex gap-4 items-center w-full">
+        <div class="flex items-center w-full gap-4 p-0">
           <p class="uppercase cursor-default">Tecnologías</p>
         </div>
         <div
@@ -40,14 +40,14 @@
         class="box borderBox bg-surface min-h-[208px] max-h-[260px] order-4 lg:col-auto items-start self-start transition-colors duration-300 rounded-xl flex flex-col gap-7 h-full justify-center justify-self-start relative w-full overflow-hidden"
       >
         <div
-          class="w-full flex-col gap-4 flex items-center p-3 h-full justify-between"
+          class="flex flex-col items-center justify-between w-full h-full gap-4 p-3"
         >
-          <p class="uppercase h-auto cursor-default text-left w-full">
+          <p class="w-full h-auto text-left uppercase cursor-default">
             Contáctame
           </p>
-          <p class="h-auto cursor-default text-white text-6xl">Hablemos</p>
+          <p class="h-auto text-6xl text-white cursor-default">Hablemos</p>
           <a
-            class="btn bg-background text-white sm:text-xl text-lg py-6 h-auto font-bold rounded-xl hover:bg-background lowercase w-full"
+            class="w-full h-auto py-6 text-lg font-bold text-white lowercase btn bg-background sm:text-xl rounded-xl hover:bg-background"
             href="mailto:juan.murato.cruz@gmail.com"
             target="_blank"
             rel="noopener"
@@ -60,12 +60,12 @@
       <div
         class="box max-h-[538px] lg:row-[auto_/_span_2] md:row-span-2 lg:col-auto md:order-3 order-2 lg:order-2 h-full items-start self-start flex flex-col gap-3 justify-start justify-self-start relative w-full overflow-hidden"
       >
-        <div class="flex flex-col gap-3 relative w-full h-full">
+        <div class="relative flex flex-col w-full h-full gap-3">
           <div
             class="flex w-full font-semibold text-white min-h-[60px] h-[60px] max-h-[60px] flex-row gap-3"
           >
             <div
-              class="flex text-center borderBox w-full h-full transition-colors duration-300 rounded-xl hover:bg-surface bg-surface justify-center border-2-center cursor-pointer items-center p-0 overflow-hidden"
+              class="flex items-center justify-center w-full h-full p-0 overflow-hidden text-center transition-colors duration-300 cursor-pointer borderBox rounded-xl hover:bg-surface bg-surface border-2-center"
             >
               <a
                 target="_blank"
@@ -83,15 +83,15 @@
             </div>
           </div>
           <div
-            class="flex borderBox flex-col w-full h-full hover:bg-surface transition-colors duration-300 rounded-xl bg-surface p-3 overflow-hidden"
+            class="flex flex-col w-full h-full p-3 overflow-hidden transition-colors duration-300 borderBox hover:bg-surface rounded-xl bg-surface"
           >
-            <div class="pb-2 flex gap-4 items-center w-full">
+            <div class="flex items-center w-full gap-4 pb-2">
               <h2 class="uppercase cursor-default">Proyectos</h2>
             </div>
             <Swiper />
             <NuxtLink to="/projects" ariaCurrentValue="ver todos los proyectos">
               <div
-                class="btn bg-background hover:bg-background rounded-xl text-white w-full mt-4"
+                class="w-full mt-4 text-white btn bg-background hover:bg-background rounded-xl"
               >
                 Ver todo
               </div></NuxtLink
@@ -101,18 +101,18 @@
       </div>
     </div>
     <div
-      class="boxButton w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-3 h-full justify-center justify-self-start relative"
+      class="relative grid justify-center w-full h-full grid-cols-2 gap-3 boxButton md:grid-cols-2 lg:grid-cols-6 justify-self-start"
     >
       <div
         class="bg-surface borderBox flex-col order-1 col-span-2 justify-between lg:col-span-3 min-h-[208px] w-full rounded-xl flex p-4"
       >
-        <div class="pb-2 flex gap-4 items-center w-full">
+        <div class="flex items-center w-full gap-4 pb-2">
           <h2 class="uppercase cursor-default">Experiencia</h2>
         </div>
         <SwiperExp />
         <NuxtLink to="/experience" ariaCurrentValue="ver toda la experiencia">
           <div
-            class="btn bg-background hover:bg-background rounded-xl text-white w-full mt-4"
+            class="w-full mt-4 text-white btn bg-background hover:bg-background rounded-xl"
           >
             Ver todo
           </div>
@@ -121,11 +121,11 @@
       <div
         class="md:order-3 borderBox flex-col order-3 col-span-1 bg-surface min-h-[208px] w-full hover:bg-surface rounded-xl flex p-4"
       >
-        <div class="pb-2 flex gap-4 items-center w-full">
+        <div class="flex items-center w-full gap-4 pb-2">
           <p class="uppercase cursor-default">Redes</p>
         </div>
         <div
-          class="flex w-full h-full flex-col justify-center items-center gap-8"
+          class="flex flex-col items-center justify-center w-full h-full gap-8"
         >
           <a
             href="https://www.linkedin.com/in/juan-david-cruz-huan/"
@@ -146,23 +146,35 @@
         </div>
       </div>
       <div
-        class="md:order-2 col-span-1 lg:col-span-2 lg:order-3 order-2 bg-surface borderBox min-h-[208px] w-full hover:bg-surface rounded-xl flex items-center justify-start p-4 md:p-10"
+        class="flex items-center justify-start order-2 w-full h-full col-span-1md:order-2 lg:col-span-2 lg:order-3"
       >
-        <div class="flex gap-2 text-white flex-col cursor-default w-full">
-          <div class="flex flex-row justify-start gap-1 w-auto text-2xl">
+        <div class="flex flex-col w-full h-full gap-2 cursor-default">
+          <div
+            class="flex flex-row justify-start w-full h-full gap-1 p-4 rounded-xl bg-surface borderBox hover:bg-surface"
+          >
             <div
-              class="w-auto flex-col text-2xl font-normal gap-4 flex justify-start items-start"
+              class="flex flex-col items-start justify-start w-full gap-4 font-normal"
             >
-              <div class="p-0 bg-success rounded-full">
-                <Icon
-                  icon="material-symbols-light:check-small-rounded"
-                  class="w-24 h-24 text-background"
-                />
+              <div class="flex items-center w-full gap-4 pb-2">
+                <h2 class="uppercase cursor-default">Estado</h2>
               </div>
-              <div class="text-6xl font-bold">
+              <p
+                class="w-full p-2 text-lg text-center md:text-2xl borderBox hover:border-success rounded-xl text-success"
+              >
+                Trabajando
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-row justify-start w-full h-full gap-1 p-4 text-2xl md:p-10 bg-surface borderBox hover:bg-surface rounded-xl"
+          >
+            <div
+              class="flex flex-col items-center justify-center w-auto gap-4 text-2xl font-normal"
+            >
+              <div class="flex flex-row gap-4 text-3xl font-bold md:text-6xl">
                 <Numbers :maxValue="4" />
+                <p class="text-lg md:text-3xl">proyectos</p>
               </div>
-              proyectos
             </div>
           </div>
         </div>
